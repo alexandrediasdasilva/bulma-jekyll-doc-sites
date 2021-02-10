@@ -3,9 +3,32 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ site.title }}</title>
+        <title>{{ page.title }} | {{ site.title }}</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
         <script src="https://kit.fontawesome.com/87fc366a32.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/style.css">
     </head>
     <body>
+        <nav class="navbar has-shadow is-fixed-top">
+            <div class="navbar-brand">
+                <a href="/" class="navbar-item">
+                    <img src="/assets/slack_help_center_logo.svg" alt="Slack Logo">
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <p class="control has-icons-left">
+                            <input class="input" type="text" placeholder="Rechercher dans le centre d'assistance">
+                            <span class="icon is-left">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="buttons navbar-item">
+                        <a href="" class="button is-primary">Nous contacter</a>
+                        <a href="" class="button is-primary">Inscrivez-vous</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
