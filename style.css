@@ -1,0 +1,42 @@
+.navbar-brand img {
+    max-height: none;
+    width: 305px !important;
+}
+
+.hero {
+    background-image: url(/assets/cat-hero-banner-image-2x.png);
+    background-size: cover;
+    background-position: center bottom;     
+}
+
+.hero .tabs a {
+    color: #fff !important;
+    font-weight: 600;
+}
+
+.hero .tabs li.is-active a {
+    color: #1d1c1d !important;
+}
+
+.tabs.is-boxed a:hover {
+    background-color:rgba(255,255,255,.2);
+    border-bottom-color: #fff;
+}
+
+section.section:not(:last-child) {
+    border-bottom: 1px solid #e3e3e3;
+}
+
+footer.footer {
+    font-size: 0.9em;
+}
+
+footer.footer a {
+    color: currentColor;
+}
+
+footer.footer ul {
+    list-style-type: none !important;
+    margin: 0;
+    padding: 0;
+}
