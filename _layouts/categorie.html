@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="container is-max-desktop content">   
-
+    {%- comment -%}page.url : {{ page.url }}{%- endcomment -%}
     {% for category in site.data.toc.categories %}
         {% for subcategory in category.subcategories %}
         <section class="section">

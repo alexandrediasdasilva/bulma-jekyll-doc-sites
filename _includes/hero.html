@@ -10,7 +10,7 @@
             <nav class="tabs is-boxed is-fullwidth">
                 <ul>
                     {% for category in site.data.toc.categories %}
-                    <li><a href="{{ category.category_url }}">{{ category.category_name }}</a></li>
+                    <li class="{% if category.category_url == page.url %}is-active{% endif %}"><a href="{{ category.category_url }}">{{ category.category_name }}</a></li>
                     {% endfor %}
                 </ul>
             </nav>
