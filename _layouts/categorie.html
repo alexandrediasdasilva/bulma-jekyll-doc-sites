@@ -1,40 +1,20 @@
 ---
 layout: default
 ---
-<div class="container is-max-desktop content">
+<div class="container is-max-desktop content">   
 
-    <section class="section">
-        <!-- <h2 class="title is-4 mb-1">Introduction à Slack</h2>-->
-        <ul style="column-count: 2; column-gap: 3em;">
-        {% for article in site.articles %}
-            <li><a href="{{ article.url }}">{{ article.title }}</a></li>
+    {% for category in site.data.toc.categories %}
+        {% for subcategory in category.subcategories %}
+        <section class="section">
+            <h2 class="title is-4 mb-1">{{ subcategory.subcategory_name }}</h2>
+                {% for article in subcategory.articles %}
+            <ul style="column-count: 2; column-gap: 3em;">
+                <li><a href="{{ article.url }}">{{ article.title }}</a>
+                </li>
+            </ul>
+                {% endfor %}    
+        </section>
         {% endfor %}
-        </ul>
-    </section>
-    
-    <!-- 
-            <section class="section">
-        <h2 class="title is-4 mb-1">Introduction à Slack</h2>
-        <div class="columns">
-        	<div class="column">
-                <ul>
-                {% assign itempercolumn = site.pages.size | divided_by: 2.0 | ceil %}
-                {%- comment -%}{{ itempercolumn }}{%- endcomment -%}
-                {% for article in site.pages limit: itempercolumn %}
-                    <li><a href="{{ article.url }}">{{ article.title }}</a></li>
-                {% endfor %}
-                </ul>
-            </div>
-            <div class="column">
-                <ul>
-                {%- comment -%}{{ site.pages.size | minus: itempercolumn }}{%- endcomment -%}
-                {% for article in site.pages offset: itempercolumn %}
-                    <li><a href="{{ article.url }}">{{ article.title }}</a></li>
-                {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </section>
-     -->
-
-    </div>
+    {% endfor %}
+            
+</div>

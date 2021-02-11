@@ -1,17 +1,20 @@
-toc:
-  - category: Premiers pas
+categories:
+  - category_name: Premiers pas
+    category_url: /premiers-pas/
     subcategories:
-      - subcategory: Introduction à Slack
+      - subcategory_name: Introduction à Slack
         articles:
-          -  
-          -
-          -
-      - subcategory: Créer ou rejoindre un espace de travail
-      - subcategory: Rejoindre Slack
-      - subcategory: Rôles et autorisations
-      - subcategory: Slack pour ordinateurs et mobiles
-  - category: Utiliser Slack
-  - category: Votre profil
-  - category: Connecter des outils
-  - category: Gérer l'espace de travail
-  - category: Tutoriels
+          - title: Comprendre comment fonctionnent les actions dans Slack
+            url: /articles/comprendre-comment-fonctionnent-les-actions-dans-slack/
+      - subcategory_name: Créer ou rejoindre un espace de travail
+      - subcategory_name: Rejoindre Slack
+      - subcategory_name: Rôles et autorisations
+      - subcategory_name: Slack pour ordinateurs et mobiles
+  - category_name: Utiliser Slack
+    category_url: /utiliser-slack
+  - category_name: Votre profil
+  - category_name: Connecter des outils
+  - category_name: Gérer l'espace de travail
+  - category_name: Tutoriels
+
+

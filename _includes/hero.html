@@ -9,12 +9,9 @@
         <div class="container is-max-desktop">
             <nav class="tabs is-boxed is-fullwidth">
                 <ul>
-                    <li class="is-active"><a href="/docs/premiers-pas">Premiers pas</a></li>
-                    <li><a href="">Utiliser Slack</a></li>
-                    <li><a href="">Votre profil</a></li>
-                    <li><a href="">Connecter des outils</a></li>
-                    <li><a href="">Gérer l'espace de travail</a></li>
-                    <li><a href="">Tutoriels</a></li>
+                    {% for category in site.data.toc.categories %}
+                    <li><a href="{{ category.category_url }}">{{ category.category_name }}</a></li>
+                    {% endfor %}
                 </ul>
             </nav>
         </div>
