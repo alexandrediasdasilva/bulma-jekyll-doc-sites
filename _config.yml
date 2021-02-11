@@ -10,9 +10,15 @@ kramdown:
 collections:
   articles:
     output: true
+  categories:
+    output: true
 
 defaults:
   - scope:
       type: articles
     values:
       layout: article
+  - scope:
+      type: categories
+    values:
+      layout: categorie
