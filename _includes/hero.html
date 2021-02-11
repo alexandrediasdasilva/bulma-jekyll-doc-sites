@@ -1,8 +1,12 @@
 <section class="hero">
     <div class="hero-body">
         <div class="container is-max-desktop">
-            <h1 class="title is-2 has-text-white has-text-weight-bold pt-5">Premiers pas</h1>
-            <p class="subtitle has-text-white">Bienvenue sur Slack ! Nous sommes ravis de vous accueillir ici. Commençons sans attendre.</p>
+            {% for category in site.data.toc.categories %}
+            {% if category.category_url == page.url %}
+            <h1 class="title is-2 has-text-white has-text-weight-bold pt-5">{{ category.category_name }}</h1>
+            <p class="subtitle has-text-white">{{ category.category_desc }}</p>
+            {% endif %}
+            {% endfor %}
         </div>
     </div>
     <div class="hero-foot pt-5">

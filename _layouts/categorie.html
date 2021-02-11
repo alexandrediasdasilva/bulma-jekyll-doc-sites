@@ -4,6 +4,7 @@ layout: default
 <div class="container is-max-desktop content">   
     {%- comment -%}page.url : {{ page.url }}{%- endcomment -%}
     {% for category in site.data.toc.categories %}
+    {% if category.category_url == page.url %}
         {% for subcategory in category.subcategories %}
         <section class="section">
             <h2 class="title is-4 mb-1">{{ subcategory.subcategory_name }}</h2>
@@ -15,6 +16,7 @@ layout: default
             </ul>
         </section>
         {% endfor %}
+    {% endif %}
     {% endfor %}
             
 </div>

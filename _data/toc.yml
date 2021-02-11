@@ -1,8 +1,10 @@
 # Pour réorganiser les catégories, sous-catégories et articles, utiliser le raccourci clavier Option+↑ ou Option+↓.
 
 categories:
+
   - category_name: Premiers pas
     category_url: /categories/premiers-pas/
+    category_desc: 'Bienvenue sur Slack ! Nous sommes ravis de vous accueillir ici. Commençons sans attendre.'
     subcategories:
       - subcategory_name: Introduction à Slack
         articles:
@@ -13,13 +15,33 @@ categories:
           - article_title: L’expérience Slack pour ordinateur
             article_url: /articles/lexperience-slack-pour-ordinateur/
       - subcategory_name: Créer ou rejoindre un espace de travail
+        articles:
+          - article_title: Créer un espace de travail Slack
+            article_url: /articles/creer-un-espace-de-travail-slack/
       - subcategory_name: Rejoindre Slack
       - subcategory_name: Rôles et autorisations
       - subcategory_name: Slack pour ordinateurs et mobiles
+  
   - category_name: Utiliser Slack
     category_url: /categories/utiliser-slack/
+    category_desc: 'Des canaux à la fonctionnalité de recherche, découvrez le fonctionnement de Slack jusque dans ses moindres détails.'
+    subcategories:
+      - subcategory_name: Travailler dans les canaux
+        articles:
+          - article_title: Qu’est-ce qu’un canal ?
+            article_url: /articles/qu-est-ce-qu-un-canal/
+      - subcategory_name: Slack Connect
+      - subcategory_name: Fonctionnalités et outils des messages
+      - subcategory_name: Partager des fichiers et des conversations
+      - subcategory_name: Faire des recherches dans Slack
+      - subcategory_name: Appels et partage d’écran
+      - subcategory_name: Raccourcis clavier et accessibilité
+  
   - category_name: Votre profil
+  
   - category_name: Connecter des outils
+  
   - category_name: Gérer l'espace de travail
+  
   - category_name: Tutoriels
 
