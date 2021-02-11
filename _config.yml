@@ -2,7 +2,17 @@ title: Slack
 permalink: pretty
 
 kramdown:
- input: GFM
- auto_ids: true
- hard_wrap: false
- syntax_highlighter: rouge
+  input: GFM
+  auto_ids: true
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+collections:
+  articles:
+    output: true
+
+defaults:
+  - scope:
+      type: articles
+    values:
+      layout: article

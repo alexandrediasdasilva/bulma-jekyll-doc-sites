@@ -6,7 +6,7 @@ layout: default
     <section class="section">
         <!-- <h2 class="title is-4 mb-1">Introduction à Slack</h2>-->
         <ul style="column-count: 2; column-gap: 3em;">
-        {% for article in site.pages %}
+        {% for article in site.articles %}
             <li><a href="{{ article.url }}">{{ article.title }}</a></li>
         {% endfor %}
         </ul>
