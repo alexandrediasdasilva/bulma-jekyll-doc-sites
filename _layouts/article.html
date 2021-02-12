@@ -1,7 +1,20 @@
 ---
 layout: default
----
+--- 
 <article class="section">
+    <nav class="breadcrumb has-succeeds-separator container is-max-desktop pl-2 pb-2">
+        <ul>
+        {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+            <li><a href="/">Centre d'assistance Slack</a></li>
+        {% for crumb in crumbs offset: 1 %}
+            {% if forloop.last %}
+            <li class="is-active"><a href="#">{{ page.title }}</a></li>
+            {% else %}
+            <li><a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a></li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </nav>
     <div class="container is-max-desktop content">
         <div class="columns">
             <div class="column is-two-thirds">
