@@ -8,9 +8,9 @@ kramdown:
   syntax_highlighter: rouge
 
 collections:
-  articles:
+  collections:
     output: true
-  categories:
+  articles:
     output: true
 
 defaults:
@@ -19,6 +19,6 @@ defaults:
     values:
       layout: article
   - scope:
-      type: categories
+      type: collections
     values:
-      layout: categorie
+      layout: collection

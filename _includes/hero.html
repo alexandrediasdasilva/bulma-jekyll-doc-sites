@@ -1,10 +1,10 @@
 <section class="hero">
     <div class="hero-body">
         <div class="container is-max-desktop">
-            {% for category in site.data.toc.categories %}
-            {% if category.category_url == page.url %}
-            <h1 class="title is-2 has-text-white has-text-weight-bold pt-5">{{ category.category_name }}</h1>
-            <p class="subtitle has-text-white">{{ category.category_desc }}</p>
+            {% for collection in site.data.collections %}
+            {% if collection.collection_url == page.url %}
+            <h1 class="title is-2 has-text-white has-text-weight-bold pt-5">{{ collection.collection_name }}</h1>
+            <p class="subtitle has-text-white">{{ collection.collection_desc }}</p>
             {% endif %}
             {% endfor %}
         </div>
@@ -13,8 +13,8 @@
         <div class="container is-max-desktop">
             <nav class="tabs is-boxed is-fullwidth">
                 <ul>
-                    {% for category in site.data.toc.categories %}
-                    <li class="{% if category.category_url == page.url %}is-active{% endif %}"><a href="{{ category.category_url }}">{{ category.category_name }}</a></li>
+                    {% for collection in site.data.collections %}
+                    <li class="{% if collection.collection_url == page.url %}is-active{% endif %}"><a href="{{ collection.collection_url }}">{{ collection.collection_name }}</a></li>
                     {% endfor %}
                 </ul>
             </nav>
