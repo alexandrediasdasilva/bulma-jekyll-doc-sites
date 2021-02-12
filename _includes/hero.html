@@ -2,7 +2,7 @@
     <div class="hero-body">
         <div class="container is-max-desktop">
             {% for collection in site.data.collections %}
-            {% if collection.collection_url == page.url %}
+            {% if page.url contains collection.collection_url %}
             <h1 class="title is-2 has-text-white has-text-weight-bold pt-5">{{ collection.collection_name }}</h1>
             <p class="subtitle has-text-white">{{ collection.collection_desc }}</p>
             {% endif %}
@@ -14,7 +14,7 @@
             <nav class="tabs is-boxed is-fullwidth">
                 <ul>
                     {% for collection in site.data.collections %}
-                    <li class="{% if collection.collection_url == page.url %}is-active{% endif %}"><a href="{{ collection.collection_url }}">{{ collection.collection_name }}</a></li>
+                    <li class="{% if page.url contains collection.collection_url %}is-active{% endif %}"><a href="/collections/{{ collection.collection_url }}/">{{ collection.collection_name }}</a></li>
                     {% endfor %}
                 </ul>
             </nav>

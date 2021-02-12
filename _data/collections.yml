@@ -13,26 +13,26 @@
 -
   collection_name: Premiers pas
   collection_desc: 'Bienvenue sur Slack ! Nous sommes ravis de vous accueillir ici. Commençons sans attendre.'
-  collection_url: /collections/premiers-pas/
+  collection_url: premiers-pas
   sections:
     -
       section_name: Introduction à Slack
       articles:
         -
           article_title: Qu'est-ce que Slack ?
-          article_url: /articles/qu-est-ce-que-slack/
+          article_url: qu-est-ce-que-slack
         - 
           article_title: Comprendre comment fonctionnent les actions dans Slack
-          article_url: /articles/comprendre-comment-fonctionnent-les-actions-dans-slack/
+          article_url: comprendre-comment-fonctionnent-les-actions-dans-slack
         - 
           article_title: L’expérience Slack pour ordinateur
-          article_url: /articles/lexperience-slack-pour-ordinateur/
+          article_url: lexperience-slack-pour-ordinateur
     -
       section_name: Créer ou rejoindre un espace de travail
       articles:
         -
           article_title: Créer un espace de travail Slack
-          article_url: /articles/creer-un-espace-de-travail-slack/
+          article_url: creer-un-espace-de-travail-slack
     -
       section_name: Rejoindre Slack
     - 
@@ -43,14 +43,14 @@
 - 
   collection_name: Utiliser Slack
   collection_desc: 'Des canaux à la fonctionnalité de recherche, découvrez le fonctionnement de Slack jusque dans ses moindres détails.'
-  collection_url: /collections/utiliser-slack/
+  collection_url: utiliser-slack
   sections:
     - 
       section_name: Travailler dans les canaux
       articles:
         - 
           article_title: Qu’est-ce qu’un canal ?
-          article_url: /articles/qu-est-ce-qu-un-canal/
+          article_url: qu-est-ce-qu-un-canal
     - 
       section_name: Slack Connect
     - 
