@@ -1,6 +1,6 @@
 ---
 title: L’expérience Slack pour ordinateur
-cat: premiers-pas
+coll: premiers-pas
 section: Introduction à Slack
 order:
 published: true

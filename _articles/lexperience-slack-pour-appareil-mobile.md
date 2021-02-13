@@ -1,6 +1,6 @@
 ---
 title: L’expérience Slack pour appareil mobile
-cat: premiers-pas
+coll: premiers-pas
 section: Introduction à Slack
 order:
 published: false

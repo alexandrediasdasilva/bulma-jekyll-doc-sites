@@ -1,6 +1,6 @@
 ---
 title: Créer un espace de travail Slack
-cat: premiers-pas
+coll: premiers-pas
 section: Créer ou rejoindre un espace de travail
 order: 
 published: true

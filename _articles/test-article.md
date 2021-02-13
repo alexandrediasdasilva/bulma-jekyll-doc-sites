@@ -1,6 +1,6 @@
 ---
 title: Article de test
-cat: test
+coll: test
 section: 
 order:
 published: true

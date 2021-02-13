@@ -1,6 +1,6 @@
 ---
 title: Qu'est-ce que Slack ?
-cat: premiers-pas
+coll: premiers-pas
 section: Introduction à Slack
 order:
 published: true

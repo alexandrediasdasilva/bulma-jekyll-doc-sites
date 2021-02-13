@@ -5,7 +5,7 @@
 
             {% for collection in site.data.collections %}
                 {% if page.url contains collection.collection_url %}
-                    <h1 class="title is-2 has-text-white has-text-weight-bold pt-5">{{ collection.collection_name }}</h1>
+                    <h1 class="title is-2 has-text-white has-text-weight-bold pt-5">{{ page.title }}</h1>
                     <p class="subtitle has-text-white">{{ collection.collection_desc }}</p>
                 {% endif %}
             {% endfor %}
@@ -16,16 +16,16 @@
             <nav class="tabs is-boxed is-fullwidth">
                 <ul>
 
-                    {%- comment -%}On liste toutes les valeurs de "cat" uniques dans les articles existants (_articles étant une collection).{%- endcomment -%}
+                    {%- comment -%}On liste toutes les valeurs de "coll" uniques dans les articles existants (_articles étant une collection).{%- endcomment -%}
 
                     {% assign articles = site.articles %}
                     {% assign collections = "" | split: ',' %}
                     {% for article in articles %}
-                    {% assign collections = collections | push: article.cat %}
+                    {% assign collections = collections | push: article.coll %}
                     {% endfor %}
                     {% assign unique_collections = collections|uniq %}
 
-                    {%- comment -%}"cat" est un slug et on ne veut donc pas qu'il apparaisse sous cette forme dans l'aborescence du site. On va donc chercher le "title" (défini pour chaque category dans la front matter des fichiers de la collection _categories) correspond au slug.{%- endcomment -%}
+                    {%- comment -%}"coll" est un slug et on ne veut donc pas qu'il apparaisse sous cette forme dans l'aborescence du site. On va donc chercher le "title" (défini pour chaque category dans la front matter des fichiers de la collection _categories) correspond au slug.{%- endcomment -%}
 
                     {% assign collections = site.collections | sort: 'order' %}
                      {% for collection in collections %}
@@ -36,19 +36,22 @@
                             
 
 
-
+{%- comment -%}
+TEST AFFICHE TITRE DE LA COLLECTION
                     {% for item in unique_collections %}
-                        {% for category in site.categories %}
+                        {% for collection in site.collections %}
                             
                             
-                            {{category.title}}
-                            {% if item == category.title %}
+                            {{collection.title}}
+                            {% if item == collection.title %}
                             {% endif %}
                         {% endfor %}
                             
                             
                         
                     {% endfor %}
+{%- endcomment -%}
+
 
                 </ul>
             </nav>

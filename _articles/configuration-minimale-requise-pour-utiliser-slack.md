@@ -1,6 +1,6 @@
 ---
 title: Configuration minimale requise pour utiliser Slack
-cat: premiers-pas
+coll: premiers-pas
 section: Introduction à Slack
 order: 1
 published: true

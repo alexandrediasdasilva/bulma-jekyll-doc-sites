@@ -1,6 +1,6 @@
 ---
 title: Comprendre comment fonctionnent les actions dans Slack
-cat: premiers-pas
+coll: premiers-pas
 section: Introduction à Slack
 order: 1
 published: true
