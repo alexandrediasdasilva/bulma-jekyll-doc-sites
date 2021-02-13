@@ -2,13 +2,35 @@
     <div class="hero-body">
         <div class="container is-max-desktop">
 
+            {% assign collections = site.collections %}
+            {% assign current_page_coll = page.coll %}
 
-            {% for collection in site.data.collections %}
-                {% if page.url contains collection.collection_url %}
-                    <h1 class="title is-2 has-text-white has-text-weight-bold pt-5">{{ page.title }}</h1>
-                    <p class="subtitle has-text-white">{{ collection.collection_desc }}</p>
-                {% endif %}
+
+            {%- comment -%}Si on est sur page d'article{%- endcomment -%}
+            {% if page.collection == "articles" %}
+
+            {%- comment -%}On compare le page.coll avec le page.name de chaque collection, et si une correspondance est
+            trouvée, alors on affiche le page.title de la collection correspondante{%- endcomment -%}
+
+            {% for collection in collections %}
+            {% if collection.path contains current_page_coll %}
+            <h1 class="title is-2 has-text-white has-text-weight-bold pt-5">{{collection.title}}</h1>
+            <p class="subtitle has-text-white">{{collection.content}}</p>
+             
+            {% endif %}
             {% endfor %}
+
+            {%- comment -%}Si on est sur autre chose que la page d'accueil (donc forcément sur une page de
+            collection){%- endcomment -%}
+            {% elsif page.url != "/" %}
+            <h1 class="title is-2 has-text-white has-text-weight-bold pt-5">{{page.title}}</h1>
+            <p class="subtitle has-text-white">
+                {{page.content}}
+            </p>
+
+
+            {% endif %}           
+            
         </div>
     </div>
     <div class="hero-foot pt-5">
@@ -16,7 +38,8 @@
             <nav class="tabs is-boxed is-fullwidth">
                 <ul>
 
-                    {%- comment -%}On liste toutes les valeurs de "coll" uniques dans les articles existants (_articles étant une collection).{%- endcomment -%}
+                    {%- comment -%}On liste toutes les valeurs de "coll" uniques dans les articles existants (_articles
+                    étant une collection).{%- endcomment -%}
 
                     {% assign articles = site.articles %}
                     {% assign collections = "" | split: ',' %}
@@ -25,34 +48,16 @@
                     {% endfor %}
                     {% assign unique_collections = collections|uniq %}
 
-                    {%- comment -%}"coll" est un slug et on ne veut donc pas qu'il apparaisse sous cette forme dans l'aborescence du site. On va donc chercher le "title" (défini pour chaque category dans la front matter des fichiers de la collection _categories) correspond au slug.{%- endcomment -%}
+                    {%- comment -%}"coll" est un slug et on ne veut donc pas qu'il apparaisse sous cette forme dans
+                    l'aborescence du site. On va donc chercher le "title" (défini pour chaque category dans la front
+                    matter des fichiers de la collection _categories) correspond au slug.{%- endcomment -%}
 
                     {% assign collections = site.collections | sort: 'order' %}
-                     {% for collection in collections %}
-<li class="{% if page.url contains collection.name %}is-active{% endif %}">
-                                <a href="/collections/{{ collection.slug }}/">{{ collection.title }}</a>
-                            </li>
-                     {% endfor %}
-                            
-
-
-{%- comment -%}
-TEST AFFICHE TITRE DE LA COLLECTION
-                    {% for item in unique_collections %}
-                        {% for collection in site.collections %}
-                            
-                            
-                            {{collection.title}}
-                            {% if item == collection.title %}
-                            {% endif %}
-                        {% endfor %}
-                            
-                            
-                        
+                    {% for collection in collections %}
+                    <li class="{% if page.path == collection.path %}is-active{% endif %}">
+                        <a href="/collections/{{ collection.slug }}/">{{ collection.title }}</a>
+                    </li>
                     {% endfor %}
-{%- endcomment -%}
-
-
                 </ul>
             </nav>
         </div>
