@@ -3,6 +3,7 @@ title: Comprendre comment fonctionnent les actions dans Slack
 cat: premiers-pas
 section: Introduction à Slack
 order: 1
+published: true
 ---
 Slack est une plateforme de messagerie basée sur des canaux. Slack permet aux gens de collaborer plus efficacement, de connecter l’ensemble de leurs outils et services logiciels, et de trouver les informations dont ils ont besoin pour travailler au mieux, le tout dans un environnement sécurisé de niveau professionnel.
 
