@@ -14,11 +14,13 @@ collections:
     output: true
 
 defaults:
-  - scope:
+  - 
+    scope:
       type: articles
     values:
       layout: article
-  - scope:
+  - 
+    scope:
       type: collections
     values:
       layout: collection

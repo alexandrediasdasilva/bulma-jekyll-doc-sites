@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{% assign articles = site.articles | group_by: 'section' %}
+
+{% for section in articles %}
+<h2>{{ section.name }}</h2>
+    <ul>
+      {% assign items = section.items %}
+      {% for item in items %}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+{% endfor %}

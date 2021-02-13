@@ -1,11 +1,13 @@
 <section class="hero">
     <div class="hero-body">
         <div class="container is-max-desktop">
+
+
             {% for collection in site.data.collections %}
-            {% if page.url contains collection.collection_url %}
-            <h1 class="title is-2 has-text-white has-text-weight-bold pt-5">{{ collection.collection_name }}</h1>
-            <p class="subtitle has-text-white">{{ collection.collection_desc }}</p>
-            {% endif %}
+                {% if page.url contains collection.collection_url %}
+                    <h1 class="title is-2 has-text-white has-text-weight-bold pt-5">{{ collection.collection_name }}</h1>
+                    <p class="subtitle has-text-white">{{ collection.collection_desc }}</p>
+                {% endif %}
             {% endfor %}
         </div>
     </div>
@@ -13,9 +15,41 @@
         <div class="container is-max-desktop">
             <nav class="tabs is-boxed is-fullwidth">
                 <ul>
-                    {% for collection in site.data.collections %}
-                    <li class="{% if page.url contains collection.collection_url %}is-active{% endif %}"><a href="/collections/{{ collection.collection_url }}/">{{ collection.collection_name }}</a></li>
+
+                    {%- comment -%}On liste toutes les valeurs de "cat" uniques dans les articles existants (_articles étant une collection).{%- endcomment -%}
+
+                    {% assign articles = site.articles %}
+                    {% assign collections = "" | split: ',' %}
+                    {% for article in articles %}
+                    {% assign collections = collections | push: article.cat %}
                     {% endfor %}
+                    {% assign unique_collections = collections|uniq %}
+
+                    {%- comment -%}"cat" est un slug et on ne veut donc pas qu'il apparaisse sous cette forme dans l'aborescence du site. On va donc chercher le "title" (défini pour chaque category dans la front matter des fichiers de la collection _categories) correspond au slug.{%- endcomment -%}
+
+                    {% assign collections = site.collections | sort: 'order' %}
+                     {% for collection in collections %}
+<li class="{% if page.url contains collection.name %}is-active{% endif %}">
+                                <a href="/collections/{{ collection.slug }}/">{{ collection.title }}</a>
+                            </li>
+                     {% endfor %}
+                            
+
+
+
+                    {% for item in unique_collections %}
+                        {% for category in site.categories %}
+                            
+                            
+                            {{category.title}}
+                            {% if item == category.title %}
+                            {% endif %}
+                        {% endfor %}
+                            
+                            
+                        
+                    {% endfor %}
+
                 </ul>
             </nav>
         </div>
