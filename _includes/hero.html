@@ -5,7 +5,6 @@
             {% assign collections = site.collections %}
             {% assign current_page_coll = page.coll %}
 
-
             {%- comment -%}Si on est sur page d'article{%- endcomment -%}
             {% if page.collection == "articles" %}
 
@@ -16,7 +15,8 @@
             {% if collection.path contains current_page_coll %}
             <h1 class="title is-2 has-text-white has-text-weight-bold pt-5">{{collection.title}}</h1>
             <p class="subtitle has-text-white">{{collection.content}}</p>
-             
+
+
             {% endif %}
             {% endfor %}
 
@@ -53,13 +53,43 @@
                     matter des fichiers de la collection _categories) correspond au slug.{%- endcomment -%}
 
                     {% assign collections = site.collections | sort: 'order' %}
+
+                    
+                    {%- comment -%}On active le bon onglet avec .is-active{%- endcomment -%}
+
+                     {%- comment -%}Si on est sur page d'article{%- endcomment -%}
+                     {% if page.collection == "articles" %}
+
+                     {%- comment -%}On compare le page.coll avec le page.name de chaque collection, et si une correspondance est
+                     trouvée, alors on affiche le page.title de la collection correspondante{%- endcomment -%}
+
+                            {% for collection in collections %}
+                            
+                            <li class="{% if collection.path contains current_page_coll %}is-active{% endif %}">
+                                <a href="/collections/{{ collection.slug }}/">{{ collection.title }}</a>
+
+                        {% endfor %}
+
+
+                    {% elsif page.url != "/" %}
+                    {%- comment -%}Si on est sur autre chose que la page d'accueil (donc forcément sur une page de
+            collection){%- endcomment -%}
+                    
                     {% for collection in collections %}
+                    
+
+
                     <li class="{% if page.path == collection.path %}is-active{% endif %}">
                         <a href="/collections/{{ collection.slug }}/">{{ collection.title }}</a>
                     </li>
+                    
+                   
+                  
                     {% endfor %}
+                    {% endif %}
                 </ul>
             </nav>
         </div>
     </div>
 </section>
+
