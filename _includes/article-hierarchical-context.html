@@ -1,0 +1,7 @@
+{%- comment -%}Récupération des titres de la collection et de la section dont l'article appartient{%- endcomment -%}
+{% for collection in site.collections %}
+    {% if collection.path contains page.coll %}
+    {% assign collection_title = collection.title %}
+    {% assign collection_path = collection.path | remove: "_collections/" | remove: ".html" %}
+    {% endif %}
+{% endfor %}
