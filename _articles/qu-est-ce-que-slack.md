@@ -8,7 +8,7 @@ published: true
 Slack est une plateforme de messagerie basée sur des canaux. Slack permet aux gens de collaborer plus efficacement, de connecter l’ensemble de leurs outils et services logiciels, et de trouver les informations dont ils ont besoin pour travailler au mieux, le tout dans un environnement sécurisé de niveau professionnel.
 
 ## Votre espace de travail Slack
-Un espace de travail Slack se compose de canaux sur lesquels les membres d’une équipe peuvent communiquer et collaborer. Continuez votre lecture pour en apprendre davantage sur quatre des principales caractéristiques de Slack.
+Un espace de travail Slack [se compose de canaux]({% link _articles/qu-est-ce-qu-un-canal.md %}) sur lesquels les membres d’une équipe peuvent communiquer et collaborer. Continuez votre lecture pour en apprendre davantage sur quatre des principales caractéristiques de Slack.
 
 ### 💬 Des conversations organisées
 Dans Slack, les collaborateurs envoient des messages et partagent des fichiers sur des canaux. Vous pouvez créer des canaux pour des équipes, des projets, des bureaux ou tout autre élément pertinent dans votre organisation. Vous pouvez convertir un canal public en canal privé pour les conversations que vous souhaitez restreindre à certains membres, ou vous pouvez utiliser les canaux partagés afin de collaborer avec des organisations externes à vos propres espaces de travail.

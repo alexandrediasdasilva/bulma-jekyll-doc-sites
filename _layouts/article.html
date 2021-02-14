@@ -8,7 +8,7 @@ layout: default
         <ul>
             <li><a href="/">Centre d'assistance Slack</a></li>
             <li><a href="/collections/{{ collection_slug }}/">{{collection_title}}</a></li>
-            <li><a href="#">{{page.section}}</a></li>
+            <li><a href="/collections/{{ collection_slug }}#{{page.section | slugify}}">{{page.section}}</a></li>
         </ul>
     </nav>
     <div class="container is-max-desktop content">
@@ -20,6 +20,7 @@ layout: default
             <div class="column">
                 <div class="box is-uppercase has-text-weight-semibold">Dans cet article
                     <hr>
+
                 </div>
             </div>
         </div>
