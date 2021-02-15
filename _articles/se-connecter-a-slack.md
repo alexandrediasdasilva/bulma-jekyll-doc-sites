@@ -4,4 +4,5 @@ coll: connecter-des-outils
 section: Travailler dans les canaux
 order:
 published: true
+featured: true
 ---

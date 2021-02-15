@@ -27,15 +27,11 @@
     scroll-margin-top: 2em;
 }
 
-section.section:not(:last-child) {
+.collection section.section:not(:last-child) {
     border-bottom: 1px solid #e3e3e3;
 }
 
-.home section.section  {
-    background-color: #f4f7fa;
-}
-
-footer.footer {
+.tips, footer.footer {
     font-size: 0.9em;
 }
 
@@ -57,11 +53,22 @@ footer.footer ul {
 .home .hero-body .container {
     max-width: 650px !important;
 }
-/* 
-.home figure {
-    display: inline-block;
-} */
 
-.home .card {
+.home .card, .home .box {
     height: 100%;
+}
+
+.home .box {
+    box-shadow: none;
+    border: 1px solid #e3e3e3;
+}
+
+.home .cards {
+    background-color: #f4f7fa;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+section.section ul {
+    column-count: 2;
+    column-gap: 3em;
 }
