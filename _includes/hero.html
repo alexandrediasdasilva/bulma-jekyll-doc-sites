@@ -1,6 +1,6 @@
 {% assign collections_list = site.collections %}
 
-<section class="hero">
+<section class="hero is-primary">
     <div class="hero-body">
         <div class="container is-max-desktop">
 
@@ -13,8 +13,8 @@
     {% for collection in collections_list %}
         {% if collection.slug == current_page_coll %}
 
-            <h1 class="title is-2 has-text-white has-text-weight-bold pt-5">{{collection.title}}</h1>
-            <p class="subtitle has-text-white">{{collection.content}}</p>
+            <h1 class="title is-2 has-text-weight-bold pt-5">{{collection.title}}</h1>
+            <p class="subtitle">{{collection.content}}</p>
 
         {% endif %}
     {% endfor %}
@@ -23,8 +23,8 @@
 collection), on a directement accès au titre et sous-titre via les variables "title" et "content" de l'article{%- endcomment -%}
 {% elsif page.url != "/" %}
 
-            <h1 class="title is-2 has-text-white has-text-weight-bold pt-5">{{page.title}}</h1>
-            <p class="subtitle has-text-white">{{page.content}}</p>
+            <h1 class="title is-2 has-text-weight-bold pt-5">{{page.title}}</h1>
+            <p class="subtitle">{{page.content}}</p>
 
 {% endif %}
 
