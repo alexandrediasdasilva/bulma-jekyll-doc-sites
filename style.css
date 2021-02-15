@@ -44,3 +44,12 @@ footer.footer ul {
     margin: 0;
     padding: 0;
 }
+
+.hero-body a {
+    color: currentColor;
+    text-decoration: underline ;
+}
+
+.hero-body.home .container {
+    max-width: 620px !important;
+}

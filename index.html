@@ -1,14 +1,33 @@
 ---
-layout: default
+layout: home
 ---
-{% assign articles = site.articles | group_by: 'section' %}
+{% assign collections_list = site.collections %}
 
-{% for section in articles %}
-<h2>{{ section.name }}</h2>
-    <ul>
-      {% assign items = section.items %}
-      {% for item in items %}
-        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-      {% endfor %}
-    </ul>
+<section class="hero is-primary is-halfheight">
+  <div class="hero-body home">
+
+    <div class="container has-text-centered ">
+      <h2 class="title is-3 has-text-weight-bold">Bonjour. Pouvons-nous vous aider ?</h2>
+      <div class="control has-icons-left mt-6 mb-5">
+        <input class="input is-medium" type="text"
+          placeholder="Recherche (par exemple, canaux, émojis ou réinitialisation de mot de passe)">
+        <span class="icon is-left">
+          <i class="fas fa-search"></i>
+        </span>
+      </div>
+      <p>
+        <span class="has-text-weight-semibold">Problèmes récurrents : </span>
+        <a href="">notifications</a>, <a href="">se connecter à Slack</a>, <a href="">Slack Calls</a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+{%- comment -%}
+{% for collection in collections_list %}
+<img src="{{ collection.image }}" alt="">
+<h2>{{ collection.title }}</h2>
+<p>{{ collection.content }}</p>
 {% endfor %}
+{%- endcomment -%}
