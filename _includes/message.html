@@ -1,0 +1,28 @@
+{% if include.content and include.content != '' and include.type and include.type != '' %}
+    {% if include.type == 'info' or include.type == 'success' or include.type == 'warning' or include.type == 'danger' %}
+    {% assign message_type = include.type %}
+
+<div class="message is-{{ message_type }}">
+
+    <div class="message-header">
+        <p>
+        {% case message_type %}
+        {% when "info" %}
+         Information
+        {% when "success" %}
+         Astuce
+        {% when "warning" %}
+         Note
+        {% when "danger" %}
+         Attention
+        {% endcase %}
+        </p>
+    </div>
+
+    <div class="message-body">
+        {{ include.content }}
+    </div>
+
+</div>
+    {% endif %}
+{% endif %}
