@@ -8,13 +8,7 @@ title: Centre d'assistance Slack
   <div class="hero-body">
     <div class="container has-text-centered">
       <h2 class="title is-2">Bonjour. Pouvons-nous vous aider&nbsp;?</h2>
-      <div class="control has-icons-left mt-6 mb-5">
-        <input class="input is-medium" type="text"
-          placeholder="Recherche (par exemple, canaux, émojis ou réinitialisation de mot de passe)">
-        <span class="icon is-left">
-          <i class="fas fa-search"></i>
-        </span>
-      </div>
+      {% include search-box.html %}
       <p>
         <span class="has-text-weight-semibold">Problèmes récurrents : </span>
         <a href="">notifications</a>, <a href="">se connecter à Slack</a>, <a href="">Slack Calls</a>
@@ -52,7 +46,7 @@ title: Centre d'assistance Slack
 <section class="section">
   <div class="container is-max-desktop content">
     <h3>Articles à ne pas manquer</h3>
-    <ul>
+    <ul class="mt-5">
       {% for article in site.articles %}
       {% if article.featured == true %}
       <li><a href="/articles/{{ article.slug }}/">{{ article.title }}</a></li>
@@ -65,7 +59,7 @@ title: Centre d'assistance Slack
 <section class="section tips">
   <div class="container is-max-desktop content">
     <h3>Astuces Slack</h3>
-    <div class="columns">
+    <div class="columns mt-1">
       <div class="column">
         <div class="media box is-align-items-center">
           <div class="media-left pr-2">

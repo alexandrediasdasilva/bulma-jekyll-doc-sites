@@ -50,7 +50,7 @@ footer.footer ul {
     text-decoration: underline ;
 }
 
-.home .hero-body .container {
+.home .hero-body .container, .search .hero-body .container, .search .container.search-results {
     max-width: 650px !important;
 }
 
@@ -68,7 +68,11 @@ footer.footer ul {
     border-bottom: 1px solid #e3e3e3;
 }
 
-section.section ul {
+.home section.section ul, .collection section.section ul {
     column-count: 2;
     column-gap: 3em;
+}
+
+[type=submit] {
+    display: none;
 }

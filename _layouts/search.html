@@ -1,0 +1,32 @@
+{% include head.html %}
+{% include hero.html %}
+<div class="container is-max-desktop search-results">
+    <section class="section">
+        {{ content }}
+    </section>
+</div>
+
+<script>
+    window.store = {
+    {% for article in site.articles %}
+        {% for collection in site.collections %}
+            {% if collection.path contains article.coll %}
+                {% assign collection_title = collection.title %}
+                {% assign collection_slug = collection.slug %}
+            {% endif %}
+        {% endfor %}
+        "{{ article.url | slugify }}": {
+          "title": "{{ article.title | xml_escape }}",
+          "collection": "{{ collection_title | xml_escape }}",
+          "collection_url": "/collections/{{ collection_slug | xml_escape }}",
+          "content": {{ article.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' '  | jsonify }},
+          "url": "{{ article.url | xml_escape }}"
+        }
+        {% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    };
+</script>
+  
+<script src="/search.js"></script>
+
+{% include footer.html %}

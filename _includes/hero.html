@@ -12,14 +12,18 @@
     {%- comment -%}On itère sur les collections en comparant le "coll" de l'article avec le slug de chaque collection. S'il y a correspondance, alors on retourne le "title" de la collection correspondante.{%- endcomment -%}
     {% for collection in collections_list %}
         {% if collection.slug == current_page_coll %}
-
-            <h1 class="title is-2 has-text-weight-bold pt-5">{{collection.title}}</h1>
-            <p class="subtitle">{{collection.content}}</p>
-
+            <h1 class="title is-2 has-text-weight-bold pt-5">{{ collection.title }}</h1>
+            <p class="subtitle">{{ collection.content }}</p>
         {% endif %}
     {% endfor %}
 
-{%- comment -%}Si on n'est pas sur une page d'article, ni sur sur la page d'accueil (donc forcément sur une page de
+{%- comment -%}Si on est sur la page de recherche, alors on affiche seulement la barre de recherche, sans titre ni sous-titre.{%- endcomment -%}
+
+{% elsif page.layout == 'search' %}
+<h1 class="title is-4 has-text-weight-bold pt-5" id="search-count"></h1>
+{% include search-box.html %}
+
+{%- comment -%}Si on n'est pas sur une page d'article, ni sur la page de recherche, ni sur sur la page d'accueil (donc forcément sur une page de
 collection), on a directement accès au titre et sous-titre via les variables "title" et "content" de l'article{%- endcomment -%}
 {% elsif page.url != "/" %}
 
@@ -46,8 +50,6 @@ collection), on a directement accès au titre et sous-titre via les variables "t
 
 {% assign articles_list = site.articles %}
 {% assign collections_list = "" | split: ',' %}
-
-{%- comment -%}{%- endcomment -%}
 
 {% for article in articles_list %}
     {% assign collections_list = collections_list | push: article.coll %}

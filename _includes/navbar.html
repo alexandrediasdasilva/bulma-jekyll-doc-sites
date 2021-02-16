@@ -6,14 +6,18 @@
     </div>
     <div class="navbar-menu">
         <div class="navbar-end">
+            {% if page.layout != 'search' %}
             <div class="navbar-item">
-                <p class="control has-icons-left">
-                    <input class="input" type="text" placeholder="Rechercher dans le centre d'assistance">
+                <form class="control has-icons-left" action="/search/" method="get">
+                    <input class="input" type="text" placeholder="Rechercher dans le centre d'assistance"
+                        id="search-box" name="query">
                     <span class="icon is-left">
                         <i class="fas fa-search"></i>
                     </span>
-                </p>
+                    <input type="submit" value="Rechercher">
+                </form>
             </div>
+            {% endif %}
             <div class="buttons navbar-item">
                 <a href="" class="button is-primary">Nous contacter</a>
                 <a href="" class="button is-primary">Inscrivez-vous</a>
