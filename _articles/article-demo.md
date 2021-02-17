@@ -87,3 +87,23 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo at earum dolorem a
 | Ligne 1 de la colonne 1 | Ligne 1 de la colonne 2 | Ligne 1 de la colonne 3 |
 | Ligne 2 de la colonne 1 | Ligne 2 de la colonne 2 | Ligne 1 de la colonne 3 |
 | Ligne 3 de la colonne 1 | Ligne 3 de la colonne 2 | Ligne 3 de la colonne 3 |
+
+---
+
+## Procédure
+
+{% include instructions.html
+
+1="Lorem ipsum dolor **sit amet consectetur**, adipisicing elit :
+- Impedit obcaecati voluptatem recusandae
+- Quaerat sapiente magni ipsa assumenda
+- Aliquid facilis sequi.
+"
+
+2="Lorem ipsum dolor [sit amet consectetur](_articles/comprendre-comment-fonctionnent-les-actions-dans-slack.md), adipisicing elit. Impedit obcaecati voluptatem recusandae quaerat sapiente magni ipsa assumenda aliquid facilis sequi!"
+
+3="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit obcaecati voluptatem recusandae quaerat sapiente magni ipsa assumenda aliquid facilis sequi!"
+
+4="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit obcaecati voluptatem recusandae quaerat sapiente magni ipsa assumenda aliquid facilis sequi!"
+
+%}

@@ -8,7 +8,7 @@ permettre les vérifications qui suivent au prochain bloc.{%- endcomment -%}
 {%- comment -%}On vérifie que le contenu existe et n'est pas vide et que le type de message est bien renseigné. Sinon,
 on affiche le contenu comme du texte normal.{%- endcomment -%}
 
-{% if include.content and include.content != '' and possible_types contains include.type %}
+{% if include.content and include.content != nil and possible_types contains include.type %}
 
 {%- comment -%}On stocke les attributs de type de note choisi via la variable "type" de l'include dans des variables.
 {%- endcomment -%}
