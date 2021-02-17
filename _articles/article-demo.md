@@ -47,6 +47,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
 Le texte peut être mis en **gras**, *italique*, ou ~~barré~~.
 
 [Lien vers une autre page]({% link _articles/qu-est-ce-que-slack.md %})
+[Lien Mardown](_articles/qu-est-ce-que-slack.md)
 
 ---
 

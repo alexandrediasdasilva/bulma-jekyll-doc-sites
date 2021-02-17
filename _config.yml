@@ -13,6 +13,13 @@ collections:
   articles:
     output: true
 
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: true
+
 defaults:
   - 
     scope:
