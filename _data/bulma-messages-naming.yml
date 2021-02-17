@@ -1,0 +1,20 @@
+-
+  bulma_color: info
+  param_name: info
+  display_name: Conseil
+  fa_icon: magic
+-
+  bulma_color: success
+  param_name: tip
+  display_name: Remarque
+  fa_icon: pencil-alt
+-
+  bulma_color: warning
+  param_name: bug
+  display_name: Remarque
+  fa_icon: exclamation-circle
+- 
+  bulma_color: danger
+  param_name:
+  display_name: 
+  fa_icon:

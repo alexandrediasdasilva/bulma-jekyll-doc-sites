@@ -6,19 +6,39 @@ order:
 published: true
 featured: true
 ---
-## Texte
+## Texte et police
 
+### Texte normal
+<div class="message">
+<div class="message-body">
 ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
+</div>
+</div>
+
+### Code
+```
+<div class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">foo</span>
+  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+<span class="k">end</span></code></pre></div>
+```
 
 ---
 
 ## Titres
 
+<div class="message">
+<div class="message-body">
+{{
+"# Titre 1
 ## Titre 2
 ### Titre 3
 #### Titre 4
 ##### Titre 5
-###### Titre 6
+###### Titre 6"
+| markdownify }}
+</div>
+</div>
 
 ---
 
@@ -26,7 +46,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
 
 Le texte peut être mis en **gras**, *italique*, ou ~~barré~~.
 
-[Lien vers une autre page](/articles/qu-est-ce-que-slack/)
+[Lien vers une autre page]({% link _articles/qu-est-ce-que-slack.md %})
 
 ---
 
@@ -50,15 +70,11 @@ Le texte peut être mis en **gras**, *italique*, ou ~~barré~~.
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo at earum dolorem aut magnam debitis iusto necessitatibus unde eligendi tempore nulla, similique aliquid labore nisi consectetur fugit quos autem exercitationem officia corporis reprehenderit et illo harum doloremque! Reprehenderit dolorem consectetur magni eos amet temporibus, a unde molestias quia, laborum atque.
 " %}
 
-{% include message.html type="success" content="
+{% include message.html type="tip" content="
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo at earum dolorem aut magnam debitis iusto necessitatibus unde eligendi tempore nulla, similique aliquid labore nisi consectetur fugit quos autem exercitationem officia corporis reprehenderit et illo harum doloremque! Reprehenderit dolorem consectetur magni eos amet temporibus, a unde molestias quia, laborum atque.
 " %}
 
-{% include message.html type="warning" content="
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo at earum dolorem aut magnam debitis iusto necessitatibus unde eligendi tempore nulla, similique aliquid labore nisi consectetur fugit quos autem exercitationem officia corporis reprehenderit et illo harum doloremque! Reprehenderit dolorem consectetur magni eos amet temporibus, a unde molestias quia, laborum atque.
-" %}
-
-{% include message.html type="danger" content="
+{% include message.html type="bug" content="
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo at earum dolorem aut magnam debitis iusto necessitatibus unde eligendi tempore nulla, similique aliquid labore nisi consectetur fugit quos autem exercitationem officia corporis reprehenderit et illo harum doloremque! Reprehenderit dolorem consectetur magni eos amet temporibus, a unde molestias quia, laborum atque.
 " %}
 
@@ -66,8 +82,8 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo at earum dolorem a
 
 ## Tableaux
 
-Colonne 1|Colonne 2|Colonne 3
----|---|---
-Ligne 1 de la colonne 1|Ligne 1 de la colonne 2|Ligne 1 de la colonne 3
-Ligne 2 de la colonne 1|Ligne 2 de la colonne 2|Ligne 1 de la colonne 3
-Ligne 3 de la colonne 1|Ligne 3 de la colonne 2|Ligne 3 de la colonne 3
+| Colonne 1               | Colonne 2               | Colonne 3               |
+| ----------------------- | ----------------------- | ----------------------- |
+| Ligne 1 de la colonne 1 | Ligne 1 de la colonne 2 | Ligne 1 de la colonne 3 |
+| Ligne 2 de la colonne 1 | Ligne 2 de la colonne 2 | Ligne 1 de la colonne 3 |
+| Ligne 3 de la colonne 1 | Ligne 3 de la colonne 2 | Ligne 3 de la colonne 3 |
