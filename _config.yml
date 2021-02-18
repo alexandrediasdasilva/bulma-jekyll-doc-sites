@@ -31,3 +31,7 @@ defaults:
       type: collections
     values:
       layout: collection
+
+_select_data:
+  collections:
+    - title
