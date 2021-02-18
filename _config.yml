@@ -32,6 +32,9 @@ defaults:
     values:
       layout: collection
 
+cloudcannon:
+  data: true
+
 _select_data:
   collections:
     - collections
