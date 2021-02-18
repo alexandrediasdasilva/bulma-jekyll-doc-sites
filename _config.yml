@@ -36,5 +36,5 @@ cloudcannon:
   data: true
 
 _select_data:
-  collections:
+  coll:
     - collections
