@@ -31,11 +31,3 @@ defaults:
       type: collections
     values:
       layout: collection
-
-cloudcannon:
-  data:
-    collections: true
-
-_select_data:
-  collections:
-    - collections
