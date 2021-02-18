@@ -23,7 +23,12 @@
 <h1 class="title is-4 has-text-weight-bold pt-5" id="search-count"></h1>
 {% include large-search-box.html %}
 
-{%- comment -%}Si on n'est pas sur une page d'article, ni sur la page de recherche, ni sur sur la page d'accueil (donc forcément sur une page de
+{%- comment -%}{%- endcomment -%}
+{% elsif page.layout == 404 %}
+            <h1 class="title is-2 has-text-weight-bold pt-5">Vous êtes tombé(e) sur un os !</h1>
+            <p class="subtitle">404 - Page introuvable</p>
+
+{%- comment -%}Si on n'est pas sur une page d'article, ni sur la page de recherche, ni sur la 404, ni sur sur la page d'accueil (donc forcément sur une page de
 collection), on a directement accès au titre et sous-titre via les variables "title" et "content" de l'article{%- endcomment -%}
 {% elsif page.url != "/" %}
 
