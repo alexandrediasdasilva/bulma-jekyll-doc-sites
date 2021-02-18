@@ -33,9 +33,9 @@ defaults:
       layout: collection
 
 cloudcannon:
-  data: true
+  data:
+    collections: true
 
 _select_data:
   collections:
     - collections
-    - articles
