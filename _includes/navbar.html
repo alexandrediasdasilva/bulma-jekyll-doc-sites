@@ -1,10 +1,16 @@
 <nav class="navbar has-shadow is-fixed-top">
-    <div class="navbar-brand">
+    <div class="navbar-brand is-align-items-center">
         <a href="/" class="navbar-item">
             <img src="/assets/slack_help_center_logo.svg" alt="Slack Logo">
         </a>
+        <a role="button" class="navbar-burger" data-target="navMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
     </div>
-    <div class="navbar-menu">
+    <div class="navbar-menu" id="navMenu">
+        <div class="navbar-start"></div>
         <div class="navbar-end">
             {% if page.layout != 'search' %}
             <div class="navbar-item">
@@ -18,9 +24,11 @@
                 </form>
             </div>
             {% endif %}
-            <div class="buttons navbar-item">
-                <a href="" class="button is-primary">Nous contacter</a>
-                <a href="" class="button is-primary">Inscrivez-vous</a>
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a href="" class="button is-primary">Nous contacter</a>
+                    <a href="" class="button is-primary">Inscrivez-vous</a>
+                </div>
             </div>
         </div>
     </div>
