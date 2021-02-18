@@ -1,0 +1,15 @@
+<div class="tabs is-boxed">
+    <ul>
+    {% for option in include %}
+    {% assign split_result = option[1] | split: ":"%}
+      <li class="{% if forloop.index == 1%}is-active{% endif %}">
+        <a>{{ split_result[0] }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+</div>
+
+{% for option in include %}
+{% assign split_result = option[1] | split: ":"%}
+{{ split_result[1] | markdownify }}
+{% endfor %}

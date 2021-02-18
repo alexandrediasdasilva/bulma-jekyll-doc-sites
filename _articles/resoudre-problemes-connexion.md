@@ -57,15 +57,38 @@ Slack ne parvient pas à se charger sur l’application pour ordinateur ou dans 
 ### Étapes de résolution des problèmes
 #### Étape 1 : vider votre cache 
 
-Ordinateur Navigateur
+{% include options.html
 
+1="Ordinateur:
+1. Ouvrez l’application Slack pour ordinateur, puis cliquez sur Aide dans la barre de menu supérieure de votre ordinateur. (Si vous utilisez Windows 10, cliquez sur l’icône à trois lignes ☰ en haut à gauche de l’application Slack.)
+2. Sélectionnez Résolution des problèmes.
+3. Cliquez sur Effacer le cache et redémarrer.
+"
+
+2="Navigateur:
+1. Videz le cache de votre navigateur web. Ces étapes peuvent varier en fonction du navigateur utilisé.
+2. Ouvrez Slack dans une fenêtre de navigation privée. Si vous parvenez à vous connecter à Slack, le problème peut être dû à une extension du navigateur. Désactivez toutes les extensions du navigateur pour voir si cela permet à Slack de se charger dans une fenêtre normale du navigateur.
+"
+
+3="Mac:
+1. Ceci
+2. Cela
+3. Puis encore ça"
+%}
+
+<!-- 
 {% include instructions.html
 1="Ouvrez l’application Slack pour ordinateur, puis cliquez sur Aide dans la barre de menu supérieure de votre ordinateur. (Si vous utilisez Windows 10, cliquez sur l’icône à trois lignes ☰ en haut à gauche de l’application Slack.)"
 2="Sélectionnez Résolution des problèmes."
 3="Cliquez sur Effacer le cache et redémarrer."
+%}
+
+{% include instructions.html
 4="Videz le cache de votre navigateur web. Ces étapes peuvent varier en fonction du navigateur utilisé."
 5="Ouvrez Slack dans une fenêtre de navigation privée. Si vous parvenez à vous connecter à Slack, le problème peut être dû à une extension du navigateur. Désactivez toutes les extensions du navigateur pour voir si cela permet à Slack de se charger dans une fenêtre normale du navigateur."
-%}
+%} -->
+
+
 
 #### Étape 2 : exécuter le test de connexion Slack
 
@@ -99,7 +122,7 @@ Envoyez-nous un message avec le fichier en pièce jointe.
 {% include message.html type="note" content="
 Si vous n’utilisez pas Chrome comme navigateur, envoyez-nous un message et nous vous aiderons à résoudre le problème.
 " %}
- 
+
 ## Erreur du serveur
 
 ### Le problème
