@@ -34,4 +34,4 @@ defaults:
 
 _select_data:
   collections:
-    - title
+    - collections
