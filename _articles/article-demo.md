@@ -6,6 +6,14 @@ order:
 published: true
 featured: true
 ---
+# Option panel
+
+{% include option-panel.html
+1="Ordinateur: haha"
+2="Navigateur: héhé"
+%}
+
+
 ## Texte et police
 
 ### Texte normal
@@ -92,6 +100,11 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo at earum dolorem a
 ---
 
 ## Procédure
+
+1. Voici l'étape 1.
+2. Voici l'étape 2.
+3. Voici l'étape 3.
+4. Voici l'étape 4.
 
 {% include instructions.html
 

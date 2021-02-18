@@ -72,3 +72,40 @@ footer.footer ul {
     margin-left: 0;
     margin-top: 0;
 }
+
+article ol {
+    counter-reset: list;
+    list-style-type: none;
+    padding-left: 0;
+    text-indent: -40px;
+    margin-left: 40px !important;
+}
+
+article li {
+    counter-increment: list;
+    list-style: none;
+}
+
+article ol li:before {
+    background-color: #f5f5f5;
+    width: 24px;
+    text-indent: 8px;
+    padding-left: 0;
+    height: 24px;
+    line-height: 24px;
+    vertical-align: top;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    display: inline-block;
+    content: counter(list);
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+article li+li:not(.tab) {
+    margin-top: 0.75em !important;    
+}
