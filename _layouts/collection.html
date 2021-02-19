@@ -6,11 +6,11 @@ layout: default
     {% for section in articles %}
 
     <section class="section" id="{{ section.name | slugify }}">
-        <h2 class="title is-4 mb-1">{{ section.name | smartify }}</h2>
+        <h2 class="title is-4 mb-1">{{ section.name | smartify }}</h2>
         <ul style="column-count: 2; column-gap: 3em;">
             {% assign items = section.items %}
             {% for item in items %}
-            <li><a href="{{ item.url }}">{{ item.title | smartify }}</a>
+            <li><a href="{{ item.url }}">{{ item.title | smartify }}</a>
             </li>
             {% endfor %}
         </ul>

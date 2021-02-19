@@ -8,13 +8,13 @@ layout: default
         <ul>
             <li><a href="/">Centre d'assistance Slack</a></li>
             <li><a href="/collections/{{ collection_slug }}/">{{ collection_title }}</a></li>
-            <li><a href="/collections/{{ collection_slug }}#{{ page.section | slugify }}">{{ page.section | smartify }}</a></li>
+            <li><a href="/collections/{{ collection_slug }}#{{ page.section | slugify }}">{{ page.section | smartify }}</a></li>
         </ul>
     </nav>
     <div class="container is-max-desktop content">
         <div class="columns">
             <div class="column is-two-thirds">
-                <h1 class="title">{{ page.title | smartify }}</h1>
+                <h1 class="title">{{ page.title | smartify }}</h1>
                 {{ content }}
             </div>
             <div class="column">

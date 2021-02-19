@@ -16,8 +16,8 @@
             {% endif %}
         {% endfor %}
         "{{ article.url | slugify }}": {
-          "title": "{{ article.title | smartify | xml_escape }}",
-          "collection": "{{ collection_title | smartify | xml_escape }}",
+          "title": "{{ article.title | smartify | xml_escape }}",
+          "collection": "{{ collection_title | smartify | xml_escape }}",
           "collection_url": "/collections/{{ collection_slug | xml_escape }}",
           "content": {{ article.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' '  | jsonify }},
           "url": "{{ article.url | xml_escape }}"

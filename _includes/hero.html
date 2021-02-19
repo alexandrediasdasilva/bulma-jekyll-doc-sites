@@ -12,8 +12,8 @@
     {%- comment -%}On itère sur les collections en comparant le "coll" de l'article avec le slug de chaque collection. S'il y a correspondance, alors on retourne le "title" de la collection correspondante.{%- endcomment -%}
     {% for collection in collections_list %}
         {% if collection.slug == current_page_coll %}
-            <h1 class="title is-2 has-text-weight-bold pt-5">{{ collection.title | smartify }}</h1>
-            <p class="subtitle">{{ collection.content | smartify }}</p>
+            <h1 class="title is-2 has-text-weight-bold pt-5">{{ collection.title | smartify }}</h1>
+            <p class="subtitle">{{ collection.content | smartify }}</p>
         {% endif %}
     {% endfor %}
 
@@ -33,7 +33,7 @@ collection), on a directement accès au titre et sous-titre via les variables "t
 {% elsif page.url != "/" %}
 
             <h1 class="title is-2 has-text-weight-bold pt-5">{{ page.title | smartify }}</h1>
-            <p class="subtitle">{{ page.content | smartify }}</p>
+            <p class="subtitle">{{ page.content | smartify }}</p>
 
 {% endif %}
 
@@ -76,7 +76,7 @@ matter des fichiers de la collection _categories) correspond au slug.{%- endcomm
         {% for collection in collections %}
         
         <li class="{% if collection.slug == current_page_coll %}is-active{% endif %}">
-            <a href="/collections/{{ collection.slug }}/">{{ collection.title | smartify }}</a>
+            <a href="/collections/{{ collection.slug }}/">{{ collection.title | smartify }}</a>
 
         {% endfor %}
 
@@ -87,7 +87,7 @@ matter des fichiers de la collection _categories) correspond au slug.{%- endcomm
         {% for collection in collections %}
 
                     <li class="{% if page.slug == collection.slug %}is-active{% endif %}">
-                        <a href="/collections/{{ collection.slug }}/">{{ collection.title | smartify }}</a>
+                        <a href="/collections/{{ collection.slug }}/">{{ collection.title | smartify }}</a>
                     </li>   
 
         {% endfor %}
