@@ -1,5 +1,5 @@
 ---
-title: L’expérience Slack pour ordinateur
+title: L'expérience Slack pour ordinateur
 coll: premiers-pas
 section: Introduction à Slack
 order:

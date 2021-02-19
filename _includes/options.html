@@ -3,7 +3,7 @@
     {% for option in include %}
     {% assign split_result = option[1] | split: ":"%}
       <li class="{% if forloop.index == 1%}is-active{% endif %}">
-        <a>{{ split_result[0] }}</a>
+        <a>{{ split_result[0] | smartify }}</a>
       </li>
     {% endfor %}
     </ul>

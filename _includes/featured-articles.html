@@ -3,7 +3,7 @@
     <ul class="mt-5">
       {% for article in site.articles %}
       {% if article.featured == true %}
-      <li><a href="/articles/{{ article.slug }}/">{{ article.title }}</a></li>
+      <li><a href="/articles/{{ article.slug }}/">{{ article.title | smartify }}</a></li>
       {% endif %}
       {% endfor %}
     </ul>
