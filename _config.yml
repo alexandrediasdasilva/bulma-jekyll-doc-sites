@@ -13,13 +13,6 @@ collections:
   articles:
     output: true
 
-plugins:
-  - jekyll-relative-links
-
-relative_links:
-  enabled: true
-  collections: true
-
 defaults:
   - 
     scope:
@@ -31,3 +24,10 @@ defaults:
       type: collections
     values:
       layout: collection
+
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: true
