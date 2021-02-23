@@ -1,0 +1,7 @@
+{%- comment -%}Récupération du titre (collection_title) et du slug (collection_slug) de la collection à laquelle l'article appartient{%- endcomment -%}
+{% for collection in site.collections %}
+    {% if collection.path contains page.coll %}
+    {% assign collection_title = collection.title %}
+    {% assign collection_slug = collection.slug %}
+    {% endif %}
+{% endfor %}

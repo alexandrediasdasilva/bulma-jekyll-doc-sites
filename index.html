@@ -1,0 +1,104 @@
+---
+layout: home
+title: Centre d'assistance Slack
+---
+
+{% assign collections_list = site.collections | sort: 'order' %}
+
+<script> 
+  window.onload = function() { 
+      document.getElementsByClassName('input is-medium')[0].focus();
+  } 
+</script>
+
+<section class="hero is-primary is-halfheight">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h2 class="title is-2 editable">
+          Bonjour. Pouvons-nous vous aider ?
+      </h2>
+      {% include large-search-box.html %}
+      <p>
+        <span class="has-text-weight-semibold">Problèmes récurrents : </span>
+        <a href="">notifications</a>, <a href="">se connecter à Slack</a>, <a href="">Slack Calls</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section cards">
+  <div class="container is-max-desktop">
+    <div class="columns is-multiline">
+      {% for collection in collections_list %}
+      <div class="column is-4">
+        <a href="/collections/{{ collection.slug }}/">
+          <div class="card has-text-centered">
+            <div class="card-content">
+              <div class="level">
+                <div class="level-item">
+                  <figure class="image is-96x96">
+                    <img src="/assets/{{ collection.image }}" alt="" />
+                  </figure>
+                </div>
+              </div>
+              <h2 class="title is-4">{{ collection.title | smartify }}</h2>
+              <p>{{ collection.content | smartify }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  {% include featured-articles.html %}
+</section>
+
+<section class="section tips">
+  <div class="container is-max-desktop content">
+    <h3>Astuces Slack</h3>
+    <div class="columns mt-1">
+      <div class="column">
+        <div class="media box is-align-items-center">
+          <div class="media-left pr-2">
+            <span class="icon">
+              <i class="fas fa-random fa-2x"></i>
+            </span>
+          </div>
+          <div class="media-content">
+            <p>Utilisez le « commutateur » : il vous permet de basculer rapidement d’un canal à un autre à
+              l’aide du raccourci ⌘/Ctrl+K.</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="media box is-align-items-center">
+          <div class="media-left pr-2">
+            <span class="icon">
+              <i class="fas fa-search fa-2x"></i>
+            </span>
+          </div>
+          <div class="media-content">
+            <p>Vous souhaitez effectuer une recherche dans un canal en particulier ? Tapez simplement : ⌘/Ctrl+F</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="media box is-align-items-center">
+          <div class="media-left pr-2">
+            <span class="icon">
+              <i class="fas fa-arrow-up fa-2x"></i>
+            </span>
+          </div>
+          <div class="media-content">
+            <p>Vous avez envoyé quelque chose par erreur ? Appuyez sur la touche avec la flèche vers le haut pour
+              modifier votre dernier message.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+{% include head.html %}
+{% include hero.html %}
+<div class="container is-max-desktop content">
+    <section class="section">
+        <div class="columns is-vcentered">
+            <div class="column is-one-third"><img src="/assets/slackbot_frowny_padded_512.png"></div>
+            <div class="column">
+                <p>Oups ! La page que vous recherchez n’est pas ici.</p>
+                <p class="mb-6"><a href="/">Revenons en arrière</a> et réessayons, d’accord ?</p>
+                
+                {% include featured-articles.html %}
+            </div>
+        </div>
+    </section>
+</div>
+{% include footer.html %}

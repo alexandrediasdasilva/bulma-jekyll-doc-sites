@@ -1,0 +1,10 @@
+<div class="container is-max-desktop content">
+    <h3>Articles à ne pas manquer</h3>
+    <ul class="mt-5">
+      {% for article in site.articles %}
+      {% if article.featured == true %}
+      <li><a href="/articles/{{ article.slug }}/">{{ article.title | smartify }}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+</div>

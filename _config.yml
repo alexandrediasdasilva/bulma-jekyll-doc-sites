@@ -1,7 +1,33 @@
-title: Un nouveau projet
+title: Slack
+permalink: pretty
 
 kramdown:
- input: GFM
- auto_ids: true
- hard_wrap: false
- syntax_highlighter: rouge
+  input: GFM
+  auto_ids: true
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+collections:
+  collections:
+    output: true
+  articles:
+    output: true
+
+defaults:
+  - 
+    scope:
+      type: articles
+    values:
+      layout: article
+  - 
+    scope:
+      type: collections
+    values:
+      layout: collection
+
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: true

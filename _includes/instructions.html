@@ -1,0 +1,12 @@
+<div class="box">
+{% for step in include %}
+{% if step[0] != nil %}
+    <div class="media pt-4">
+        <div class="media-left"><span class="number">{{forloop.index}}</span></div>
+        <div class="media-content">
+            {{step[1] | markdownify}}
+        </div>
+    </div>
+{% endif %}
+{% endfor %}
+</div>

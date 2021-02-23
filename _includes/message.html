@@ -1,0 +1,42 @@
+{%- comment -%}On créé une variable pour stocker les valeurs possibles à partir du fichier YML de correspondance, pour
+permettre les vérifications qui suivent au prochain bloc.{%- endcomment -%}
+{% assign possible_types = "" | split: ',' %}
+{% for color in site.data.bulma-messages-naming %}
+{% assign possible_types = possible_types | push: color.param_name %}
+{% endfor %}
+
+{%- comment -%}On vérifie que le contenu existe et n'est pas vide et que le type de message est bien renseigné. Sinon,
+on affiche le contenu comme du texte normal.{%- endcomment -%}
+
+{% if include.content and include.content != nil and possible_types contains include.type %}
+
+{%- comment -%}On stocke les attributs de type de note choisi via la variable "type" de l'include dans des variables.
+{%- endcomment -%}
+{% for color in site.data.bulma-messages-naming %}
+{% if include.type == color.param_name %}
+{% assign bulma_color = color.bulma_color %}
+{% assign message_display_name = color.display_name %}
+{% assign message_icon = color.fa_icon %}
+{% endif %}
+{% endfor %}
+
+<div class="message is-{{ bulma_color }}">
+    <div class="message-body">
+        <div class="media is-align-items-center">
+            <div class="media-left pr-2">
+                <span class="icon">
+                    <i class="fas fa-{{ message_icon }} fa-lg"></i>
+                </span>
+            </div>
+            <div class="media-content">
+                <p>
+                    <span class="has-text-weight-bold">{{ message_display_name }}&#160;:</span> {{ include.content
+                    }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+{{ include.content }}
+{% endif %}

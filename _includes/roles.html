@@ -1,0 +1,12 @@
+<div class="box">
+    <p class="has-text-weight-bold">Qui peut utiliser cette fonctionnalité ?</p>
+        {% if include.allowed contains 'admin' %}
+            Administrateurs
+        {% endif %}
+        {% if include.allowed contains 'sup' %}
+            Superviseurs
+        {% endif %}
+        {% if include.allowed contains 'user' %}
+            Utilisateurs
+        {% endif %}
+</div>
