@@ -8,4 +8,6 @@ fields:
   config:
     required: true
 pages:
+- _sections/creer-ou-rejoindre-un-espace-de-travail.md
+- _sections/obtenir-des-conseils-pour-la-resolution-des-problemes.md
 - _sections/travailler-dans-les-canaux.md
