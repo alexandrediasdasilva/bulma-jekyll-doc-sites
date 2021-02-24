@@ -1,0 +1,16 @@
+---
+label: KB article
+hide_body: false
+fields:
+- name: collection_yml
+  type: select
+  default: Collections
+  config:
+    required: true
+    options: []
+    source:
+      type: documents
+      section: collections-50591e15-27bf-4998-a8ca-fbc31770d7a5
+      file: _data/collections.yml
+      path: 
+  label: Collection YML
