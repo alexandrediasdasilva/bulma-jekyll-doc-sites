@@ -29,7 +29,7 @@ title: Centre d'assistance Slack
 <section class="section cards">
   <div class="container is-max-desktop">
     <div class="columns is-multiline">
-      {% for collection in collections_list %}
+      {% for collection in site.menus.docs %}
       <div class="column is-4">
         <a href="/collections/{{ collection.slug }}/">
           <div class="card has-text-centered">
@@ -42,7 +42,7 @@ title: Centre d'assistance Slack
                 </div>
               </div>
               <h2 class="title is-4">{{ collection.title | smartify }}</h2>
-              <p>{{ collection.content | smartify }}</p>
+              <p>{{ collection.description | smartify }}</p>
             </div>
           </div>
         </a>
