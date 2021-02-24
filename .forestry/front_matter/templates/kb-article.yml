@@ -1,4 +1,16 @@
 ---
 label: KB article
 hide_body: false
-fields: []
+fields:
+- name: collection_yml
+  type: select
+  default: []
+  config:
+    required: true
+    options: []
+    source:
+      type: pages
+      section: collections-50591e15-27bf-4998-a8ca-fbc31770d7a5
+      file: 
+      path: 
+  label: Collection YML
