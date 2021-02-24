@@ -7,7 +7,6 @@ sections:
 - type: document
   path: _data/collections.yml
   label: Collections
-  match: "**/*"
 - type: jekyll-pages
   label: Pages
   create: all
