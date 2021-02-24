@@ -1,0 +1,19 @@
+---
+label: Article
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: coll
+  label: coll
+- type: text
+  name: section
+  label: section
+- type: text
+  name: order
+  label: order
+- type: boolean
+  name: featured
+  label: featured
