@@ -9,8 +9,8 @@ fields:
     required: true
     options: []
     source:
-      type: documents
+      type: pages
       section: collections-50591e15-27bf-4998-a8ca-fbc31770d7a5
-      file: _data/collections.yml
+      file: _collections/premiers-pas.html
       path: 
   label: Collection YML
