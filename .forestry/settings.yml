@@ -18,6 +18,8 @@ sections:
   label: Sections
   create: all
   match: "**/*"
+  templates:
+  - section
 - type: directory
   path: _collections
   label: Collections
