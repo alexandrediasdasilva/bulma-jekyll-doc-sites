@@ -1,4 +1,4 @@
 ---
-title: Obtenir des conseils pour la résolution des problèmes
+title: Obtenir des conseils pour la résolution des issues
 
 ---
