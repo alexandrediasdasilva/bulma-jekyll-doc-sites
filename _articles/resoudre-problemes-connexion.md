@@ -4,7 +4,7 @@ coll: votre-profil
 section: Obtenir des conseils pour la résolution des problèmes
 order: 
 featured: true
-
+menus: docs
 ---
 **Salut la compagnie !**
 

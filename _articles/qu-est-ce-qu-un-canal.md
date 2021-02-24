@@ -5,4 +5,5 @@ section: Travailler dans les canaux
 order:
 published: true
 featured: false
+menus: docs
 ---
