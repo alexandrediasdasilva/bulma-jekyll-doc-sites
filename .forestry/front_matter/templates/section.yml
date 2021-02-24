@@ -7,3 +7,5 @@ fields:
   label: Titre
   config:
     required: true
+pages:
+- _sections/travailler-dans-les-canaux.md
