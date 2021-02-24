@@ -5,6 +5,7 @@ section:
 order:
 published: true
 featured: true
+menus: docs
 ---
 ## Texte et police
 
