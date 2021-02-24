@@ -18,6 +18,8 @@ sections:
   label: Collections
   create: all
   match: "**/*"
+  templates:
+  - collection
 - type: heading
   label: Marketing
 - type: jekyll-posts
