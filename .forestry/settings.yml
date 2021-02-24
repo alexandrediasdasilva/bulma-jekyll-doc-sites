@@ -14,6 +14,11 @@ sections:
   templates:
   - article
 - type: directory
+  path: _sections
+  label: Sections
+  create: all
+  match: "**/*"
+- type: directory
   path: _collections
   label: Collections
   create: all
