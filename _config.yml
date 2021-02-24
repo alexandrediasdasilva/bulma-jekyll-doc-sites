@@ -27,6 +27,7 @@ defaults:
 
 plugins:
   - jekyll-relative-links
+  - jekyll-menus
 
 relative_links:
   enabled: true
