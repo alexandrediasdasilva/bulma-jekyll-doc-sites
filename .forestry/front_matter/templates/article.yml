@@ -1,7 +1,6 @@
 ---
 label: Article
 hide_body: false
-display_field: section
 fields:
 - type: text
   name: title
