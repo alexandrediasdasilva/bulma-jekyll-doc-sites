@@ -1,15 +1,11 @@
 ---
 title: Résoudre les problèmes de connexion
-coll: votre-profil
-section: Obtenir des conseils pour la résolution des problèmes
-order: 
 featured: true
 menu:
   docs:
     weight: 1
     parent: item_rbKx4yd
     identifier: item_y24snUm
-
 ---
 **Salut la compagnie !**
 

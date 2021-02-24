@@ -1,15 +1,11 @@
 ---
 title: L’expérience Slack pour appareil mobile
-coll: premiers-pas
-section: Introduction à Slack
-order: 
 featured: false
 menu:
   docs:
     weight: 3
     parent: item_XzEyYDs
     identifier: item_yXgq1nk
-
 ---
 Slack est une plateforme de messagerie basée sur des canaux. Slack permet aux gens de collaborer plus efficacement, de connecter l’ensemble de leurs outils et services logiciels, et de trouver les informations dont ils ont besoin pour travailler au mieux, le tout dans un environnement sécurisé de niveau professionnel.
 

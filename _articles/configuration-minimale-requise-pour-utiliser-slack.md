@@ -1,15 +1,11 @@
 ---
 title: Configuration minimale requise pour utiliser Slack
-coll: premiers-pas
-section: Introduction à Slack
-order: 1
 featured: false
 menu:
   docs:
     weight: 2
     parent: item_XzEyYDs
     identifier: item_mVUNGNg
-
 ---
 Slack est une plateforme de messagerie basée sur des canaux. Slack permet aux gens de collaborer plus efficacement, de connecter l’ensemble de leurs outils et services logiciels, et de trouver les informations dont ils ont besoin pour travailler au mieux, le tout dans un environnement sécurisé de niveau professionnel.
 
