@@ -4,16 +4,26 @@ hide_body: true
 fields:
 - type: text
   name: title
-  label: title
-- type: text
-  name: coll
-  label: coll
+  label: Titre
+  config:
+    required: true
+- name: coll
+  type: select
+  default: []
+  config:
+    required: true
+    options: []
+    source:
+      type: pages
+      section: collections
+      file: 
+      path: 
+  label: Collection
 - type: text
   name: section
-  label: section
-- type: text
-  name: order
-  label: order
+  label: Section
+  config:
+    required: true
 - type: boolean
   name: featured
-  label: featured
+  label: En vedette
