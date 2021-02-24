@@ -4,13 +4,13 @@ hide_body: false
 fields:
 - name: collection_yml
   type: select
-  default: []
+  default: Collections
   config:
     required: true
     options: []
     source:
-      type: pages
+      type: documents
       section: collections-50591e15-27bf-4998-a8ca-fbc31770d7a5
-      file: 
+      file: _data/collections.yml
       path: 
   label: Collection YML
