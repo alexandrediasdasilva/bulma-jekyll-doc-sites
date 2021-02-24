@@ -18,6 +18,10 @@ sections:
   match: "**/*"
 - type: heading
   label: Marketing
+- type: jekyll-posts
+  label: Blog
+  create: all
+  match: "**/*"
 - type: jekyll-pages
   label: Pages
   create: all
