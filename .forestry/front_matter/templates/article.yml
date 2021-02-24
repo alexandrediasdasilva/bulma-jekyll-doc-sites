@@ -1,0 +1,29 @@
+---
+label: Article
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Titre
+  config:
+    required: true
+- name: coll
+  type: select
+  default: []
+  config:
+    required: true
+    options: []
+    source:
+      type: pages
+      section: collections
+      file: 
+      path: 
+  label: Collection
+- type: text
+  name: section
+  label: Section
+  config:
+    required: true
+- type: boolean
+  name: featured
+  label: En vedette

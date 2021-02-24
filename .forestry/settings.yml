@@ -4,16 +4,25 @@ auto_deploy: false
 admin_path: "/admin/"
 webhook_url: 
 sections:
+- type: heading
+  label: Documentation
 - type: directory
   path: _articles
   label: Articles
   create: all
   match: "**/*"
+  templates:
+  - article
 - type: directory
   path: _collections
   label: Collections
   create: all
   match: "**/*"
+- type: heading
+  label: Marketing
+- type: jekyll-posts
+  label: Blog
+  create: all
 - type: jekyll-pages
   label: Pages
   create: all
