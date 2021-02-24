@@ -1,11 +1,13 @@
 ---
 title: Ceci est le titre de l'article
-coll:
-section:
-order:
-published: true
+coll: 
+section: 
+order: 
 featured: true
-menus: docs
+menu:
+  docs:
+    weight: 1
+
 ---
 ## Texte et police
 

@@ -2,10 +2,13 @@
 title: Qu'est-ce que Slack ?
 coll: premiers-pas
 section: Introduction à Slack
-order:
-published: true
+order: 
 featured: true
-menus: docs
+menu:
+  docs:
+    weight: 7
+    parent: item__JzVHaz
+
 ---
 Slack est une plateforme de messagerie basée sur des canaux. Slack permet aux gens de collaborer plus efficacement, de connecter l’ensemble de leurs outils et services logiciels, et de trouver les informations dont ils ont besoin pour travailler au mieux, le tout dans un environnement sécurisé de niveau professionnel.
 

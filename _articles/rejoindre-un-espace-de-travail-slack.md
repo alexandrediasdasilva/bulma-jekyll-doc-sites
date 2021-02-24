@@ -2,10 +2,13 @@
 title: Rejoindre un espace de travail Slack
 coll: premiers-pas
 section: Créer ou rejoindre un espace de travail
-order:
-published: true
+order: 
 featured: false
-menus: docs
+menu:
+  docs:
+    weight: 6
+    parent: item__JzVHaz
+
 ---
 Slack est une plateforme de messagerie basée sur des canaux. Slack permet aux gens de collaborer plus efficacement, de connecter l’ensemble de leurs outils et services logiciels, et de trouver les informations dont ils ont besoin pour travailler au mieux, le tout dans un environnement sécurisé de niveau professionnel.
 

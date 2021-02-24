@@ -4,7 +4,11 @@ coll: votre-profil
 section: Obtenir des conseils pour la résolution des problèmes
 order: 
 featured: true
-menus: docs
+menu:
+  docs:
+    weight: 1
+    parent: item_KKykcBe
+
 ---
 **Salut la compagnie !**
 
