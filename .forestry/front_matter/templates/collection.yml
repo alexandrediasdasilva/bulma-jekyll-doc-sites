@@ -10,8 +10,10 @@ fields:
 - type: file
   name: image
   label: Image
+  description: Apparaît sur la page d'accueil
 - type: text
   name: description
   label: Description
   config:
     required: true
+  description: Apparaît sur la page d'accueil et la page de collection correspondante
