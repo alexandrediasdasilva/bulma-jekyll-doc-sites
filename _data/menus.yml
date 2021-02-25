@@ -1,13 +1,13 @@
 ---
 docs:
-- weight: 1
-  parent: item_ph8UDDF
-  identifier: item_gg7MiZw
-  title: Se connecter à Slack
 - identifier: item_1QE8Ucy
   weight: 1
   parent: item_yeTJQSs
   title: Travailler dans les canaux
+- weight: 1
+  parent: item_ph8UDDF
+  identifier: item_gg7MiZw
+  title: Se connecter à Slack
 - identifier: item_XzEyYDs
   weight: 1
   parent: item_PtFxPQF
