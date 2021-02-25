@@ -2,20 +2,35 @@
 layout: default
 ---
 <div class="container is-max-desktop content">
-    {% assign articles = site.articles | where: "coll", page.slug | group_by: 'section' %}
-    {% for section in articles %}
 
-    <section class="section" id="{{ section.name | slugify }}">
+    <ul style="column-count: 2; column-gap: 3em;">
+
+    {% for item in site.menus.docs %}
+    {% if item.parent %}
+
+        {% for parent_item in site.menus.docs %}
+           
+            {% if parent_item.identifier == item.parent %}
+                
+                {% if parent_item.parent %}
+                <li><a href="{{ item.url }}">{{ item.title | smartify }}</a>
+                </li>
+               
+                {% endif %}    
+
+            {% endif %}
+        
+        {% endfor %}
+
+    {% endif %}
+
+{% endfor %}
+</ul>
+
+    
+    <!-- <section class="section" id="{{ section.name | slugify }}">
         <h2 class="title is-4 mb-1">{{ section.name | smartify }}</h2>
-        <ul style="column-count: 2; column-gap: 3em;">
-            {% assign items = section.items %}
-            {% for item in items %}
-            <li><a href="{{ item.url }}">{{ item.title | smartify }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </section>
-
-    {% endfor %}
+            
+    </section> -->
 
 </div>
