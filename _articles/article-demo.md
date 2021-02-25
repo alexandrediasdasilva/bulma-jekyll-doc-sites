@@ -1,7 +1,6 @@
 ---
 title: Ceci est le titre de l'article
 featured: true
-menus: item_r6rR9w3
 ---
 ## Texte et police
 

@@ -1,12 +1,6 @@
 ---
 title: Résoudre les problèmes de connexion
 featured: true
-menu:
-  docs:
-    weight: 1
-    parent: item_7d5gXCi
-    identifier: item_y24snUm
-
 ---
 **Salut la compagnie !**
 
