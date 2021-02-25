@@ -3,7 +3,7 @@ title: Ceci est le titre de l'article
 featured: true
 menu:
   docs:
-    weight: 1
+    weight: 3
     parent: item_pDTsV3Z
     title: Test
 

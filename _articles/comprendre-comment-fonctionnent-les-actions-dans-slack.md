@@ -3,7 +3,7 @@ title: Comprendre comment fonctionnent les actions dans Slack
 featured: true
 menu:
   docs:
-    weight: 3
+    weight: 2
     parent: item_pDTsV3Z
     title: Comprendre comment fonctionnent les actions
     identifier: item_RpxUxi1

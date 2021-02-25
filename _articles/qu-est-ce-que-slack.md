@@ -3,7 +3,7 @@ title: Qu'est-ce que Slack ?
 featured: true
 menu:
   docs:
-    weight: 2
+    weight: 1
     identifier: item_qJVrowm
     parent: item_pDTsV3Z
 
