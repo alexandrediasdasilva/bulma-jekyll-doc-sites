@@ -1,7 +1,6 @@
 ---
-title: titre brouillon temporaire
+title: titre brouillon définitif
 featured: false
-published: false
 
 ---
 jiri ihieuz rziuh riuzh uri huizh riu hziuo hrzoi hrzio rio
