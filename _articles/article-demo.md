@@ -4,6 +4,7 @@ featured: true
 menu:
   docs:
     weight: 1
+    parent: item_RuqmnSy
     title: Test
 
 ---
