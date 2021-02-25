@@ -1,0 +1,172 @@
+---
+---
+{% assign docs = site.menus.docs %}
+
+<h2>Détermination du niveau d'un document dans la hiérarchie</h2>
+
+{% for item in docs %}
+{{ item.title }} =>
+    {% if item.parent %}
+
+        {% for parent_item in docs %}
+           
+            {% if parent_item.identifier == item.parent %}
+                
+                {% if parent_item.parent %}
+                    3
+                {% else %}
+                    2
+                {% endif %}    
+
+            {% endif %}
+        
+        {% endfor %}
+
+    {% else %}
+        1
+    {% endif %}
+
+{% endfor %}
+
+<!--  -->
+
+<h2>Liste de tous les items du menu, sans hiérarchie</h2>
+<ul>
+
+{% for item in docs %}
+<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+
+{% endfor %}
+
+</ul>
+
+<!-- Niveau 1 = n'a pas de parent -->
+
+<h2>Liste de toutes les collections</h2>
+<ul>
+
+{% for item in docs %}
+    {% unless item.parent %}
+
+<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+
+    {% endunless %}
+{% endfor %}
+
+</ul>
+
+<!-- Niveau 2 = a un parent qui n'a pas de parent -->
+
+<h2>Liste de toutes les sections</h2>
+<ul>
+
+{% for item in docs %}
+    {% if item.parent %}
+
+        {% for parent_item in docs %}
+            
+            {% if parent_item.identifier == item.parent %}
+                
+                {% unless parent_item.parent %}
+                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                {% endunless %}    
+
+            {% endif %}
+        
+        {% endfor %}
+
+    {% endif %}
+
+{% endfor %}
+
+</ul>
+
+<!-- Niveau 3 = a un parent qui a un parent -->
+
+<h2>Liste de tous les articles</h2>
+<ul>
+
+    {% for item in docs %}
+        {% if item.parent %}
+    
+            {% for parent_item in docs %}
+               
+                {% if parent_item.identifier == item.parent %}
+                    
+                    {% if parent_item.parent %}
+                    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                   
+                    {% endif %}    
+    
+                {% endif %}
+            
+            {% endfor %}
+    
+        {% endif %}
+    
+    {% endfor %}
+
+</ul>
+
+<!--  -->
+
+<h2>Objet JSON contenant tous les items du menu</h2>
+
+{{ docs.menu | inspect }}
+
+<!--  -->
+
+
+<h2>Workaround GitHub</h2>
+
+<ul><!-- collection -->
+{% for link in site.menus.docs %}{%- comment -%}Tant qu'il y a des items dans le menu "docs"{%- endcomment -%}
+    {% if link.parent == nil %}{%- comment -%}Si l'item sur lequel on est en train d'itérer n'a pas de parent (= niveau 1 dans la hiérarchie), alors on créé un item de 1er niveau dans l'ul{%- endcomment -%}
+    <li><a href="{{ link.url }}">{{ link.title }}</a>
+        {% assign nav_level_2 = site.menus.docs | where: 'parent', link.identifier %}{%- comment -%}On filtre le menu "docs" pour trouver l'item dont le parent correspond à l'identifier de l'item sur lequel on est en train d'itérer, et on le stocke dans une variable{%- endcomment -%}
+        {% if nav_level_2.size > 0 %}{%- comment -%}S'il y a bien un parent, alors on commence une liste de 2e niveau dans le même li{%- endcomment -%}
+        <ul><!-- section -->
+            {% for child in nav_level_2 %}{%- comment -%}Tant qu'il y a des items de 2e niveau dans le menu "docs"{%- endcomment -%}
+            <li><a href="{{ child.url }}">{{ child.title }}</a>
+                {% assign nav_level_3 = site.menus.docs | where: 'parent', child.identifier %}{%- comment -%}On filtre le menu "docs" pour trouver l'item dont le parent correspond à l'identifier de l'item de 2e niveau sur lequel on est en train d'itérer, et on le stocke dans une variable{%- endcomment -%}
+                {% if nav_level_3.size > 0 %}{%- comment -%}S'il y a bien un parent, alors on commence une liste de 3e niveau dans le même li{%- endcomment -%}
+                <ul><!-- article -->
+                    {% for grandchild in nav_level_3 %}{%- comment -%}Tant qu'il y a des items de 3e niveau dans le menu "docs"{%- endcomment -%}
+                    <li><a href="{{ grandchild.url }}">{{ grandchild.title }}</a>
+                    {% endfor %}
+                    </li>
+                </ul><!-- end article -->
+                {% endif %}
+            {% endfor %}
+            </li>
+        </ul><!-- end section -->
+        {% endif %}
+    {% endif %}
+{% endfor %}
+</ul><!-- end collection -->
+
+<h2>Lister les articles, groupés par section</h2>
+
+
+{% for link in site.menus.docs %}{%- comment -%}Tant qu'il y a des items dans le menu "docs"{%- endcomment -%}
+    {% if link.parent == nil %}{%- comment -%}Si l'item sur lequel on est en train d'itérer n'a pas de parent (= niveau 1 dans la hiérarchie), alors on créé un item de 1er niveau dans l'ul{%- endcomment -%}
+        {% assign nav_level_2 = site.menus.docs | where: 'parent', link.identifier %}{%- comment -%}On filtre le menu "docs" pour trouver l'item dont le parent correspond à l'identifier de l'item sur lequel on est en train d'itérer, et on le stocke dans une variable{%- endcomment -%}
+        {% if nav_level_2.size > 0 %}{%- comment -%}S'il y a bien un parent, alors on commence une liste de 2e niveau dans le même li{%- endcomment -%}
+            {% for child in nav_level_2 %}{%- comment -%}Tant qu'il y a des items de 2e niveau dans le menu "docs"{%- endcomment -%}
+                <section class="section" id="{{ child.title | slugify }}">
+                <h2 class="title is-4 mb-1">{{ child.title | smartify }}</h2>
+                {% assign nav_level_3 = site.menus.docs | where: 'parent', child.identifier %}{%- comment -%}On filtre le menu "docs" pour trouver l'item dont le parent correspond à l'identifier de l'item de 2e niveau sur lequel on est en train d'itérer, et on le stocke dans une variable{%- endcomment -%}
+                {% if nav_level_3.size > 0 %}{%- comment -%}S'il y a bien un parent, alors on commence une liste de 3e niveau dans le même li{%- endcomment -%}
+                <ul><!-- article -->
+                    {% for grandchild in nav_level_3 %}{%- comment -%}Tant qu'il y a des items de 3e niveau dans le menu "docs"{%- endcomment -%}
+                    <li><a href="{{ grandchild.url }}">{{ grandchild.title | smartify }}</a>
+                    {% endfor %}
+                    </li>
+                </ul><!-- end article -->
+                {% endif %}
+                </section>
+            {% endfor %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+

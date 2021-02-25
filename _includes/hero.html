@@ -1,5 +1,3 @@
-{% assign collections_list = site.collections %}
-
 <section class="hero is-primary">
     <div class="hero-body">
         <div class="container is-max-desktop">
@@ -33,7 +31,7 @@ collection), on a directement accès au titre et sous-titre via les variables "t
 {% elsif page.url != "/" %}
 
             <h1 class="title is-2 has-text-weight-bold pt-5">{{ page.title | smartify }}</h1>
-            <p class="subtitle">{{ page.content | smartify }}</p>
+            <p class="subtitle">{{ page.description | smartify }}</p>
 
 {% endif %}
 
@@ -45,56 +43,18 @@ collection), on a directement accès au titre et sous-titre via les variables "t
 
 {%- comment -%}Début de la logique pour l'affichage des onglets de collection{%- endcomment -%}
 
+
     <div class="hero-foot pt-5">
         <div class="container is-max-desktop">
             <nav class="tabs is-boxed is-fullwidth has-text-weight-semibold">
                 <ul>
-
-{%- comment -%}On liste toutes les valeurs de "coll" uniques dans les articles existants (_articles
-étant une collection), qu'on met dans la variable "unique_collections"{%- endcomment -%}
-
-{% assign articles_list = site.articles %}
-{% assign collections_list = "" | split: ',' %}
-
-{% for article in articles_list %}
-    {% assign collections_list = collections_list | push: article.coll %}
-{% endfor %}
-
-{% assign unique_collections = collections_list|uniq %}
-
-{%- comment -%}"coll" est un slug et on ne veut donc pas qu'il apparaisse sous cette forme dans
-l'aborescence du site. On va donc chercher le "title" (défini pour chaque category dans la front
-matter des fichiers de la collection _categories) correspond au slug.{%- endcomment -%}
-
-{% assign collections = site.collections | sort: 'order' %}
-
-    {%- comment -%}Si on est sur page d'article{%- endcomment -%}
-    {% if page.collection == "articles" %}
-
-        {%- comment -%}On compare le page.coll avec le page.name de chaque collection, et si une correspondance est
-        trouvée, alors on affiche le page.title de la collection correspondante sous forme de lien{%- endcomment -%}
-        {% for collection in collections %}
-        
-        <li class="{% if collection.slug == current_page_coll %}is-active{% endif %}">
-            <a href="/collections/{{ collection.slug }}/">{{ collection.title | smartify }}</a>
-
-        {% endfor %}
-
-    {%- comment -%}Si on n'est pas sur une page d'article, ni sur sur la page d'accueil (donc forcément sur une page de
-    collection){%- endcomment -%}
-    {% elsif page.url != "/" %}
-
-        {% for collection in collections %}
-
-                    <li class="{% if page.slug == collection.slug %}is-active{% endif %}">
-                        <a href="/collections/{{ collection.slug }}/">{{ collection.title | smartify }}</a>
-                    </li>   
-
-        {% endfor %}
-    {% endif %}
-
-{%- comment -%}Fin de la logique pour l'affichage des onglets de collection{%- endcomment -%}
-
+                {% for item in site.menus.docs %}
+                    {% unless item.parent %}
+                    <li class="{% if item.identifier == page.menu.docs.identifier %}is-active{% endif %}">
+                        <a href="{{ item.url }}">{{ item.title | smartify }}</a>
+                    </li>
+                    {% endunless %}
+                {% endfor %}
                 </ul>
             </nav>
         </div>

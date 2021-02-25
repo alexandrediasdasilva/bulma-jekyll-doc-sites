@@ -28,24 +28,30 @@ title: Centre d'assistance Slack
 <section class="section cards">
   <div class="container is-max-desktop">
     <div class="columns is-multiline">
-      {% for collection in collections_list %}
+      {% for item in site.menus.docs %}      
+        {% unless item.parent %}
+          {% for subitem in site.collections %}
+            {% if item.identifier == subitem.menu.docs.identifier %}
       <div class="column is-4">
-        <a href="/collections/{{ collection.slug }}/">
+        <a href="{{ item.url }}">
           <div class="card has-text-centered">
             <div class="card-content">
               <div class="level">
                 <div class="level-item">
                   <figure class="image is-96x96">
-                    <img src="/assets/{{ collection.image }}" alt="" />
+                    <img src="/assets/{{ subitem.image }}/" alt="" />
                   </figure>
                 </div>
               </div>
-              <h2 class="title is-4">{{ collection.title | smartify }}</h2>
-              <p>{{ collection.description | smartify }}</p>
+              <h2 class="title is-4">{{ subitem.title | smartify }}</h2>
+              <p>{{ subitem.description | smartify }}</p>
             </div>
           </div>
         </a>
       </div>
+            {% endif %}
+          {% endfor %}
+        {% endunless %}
       {% endfor %}
     </div>
   </div>

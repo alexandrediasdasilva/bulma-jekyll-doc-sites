@@ -2,35 +2,18 @@
 layout: default
 ---
 <div class="container is-max-desktop content">
-
-    <ul style="column-count: 2; column-gap: 3em;">
-
-    {% for item in site.menus.docs %}
-    {% if item.parent %}
-
-        {% for parent_item in site.menus.docs %}
-           
-            {% if parent_item.identifier == item.parent %}
-                
-                {% if parent_item.parent %}
-                <li><a href="{{ item.url }}">{{ item.title | smartify }}</a>
-                </li>
-               
-                {% endif %}    
-
+{% for item in site.menus.docs %}    
+    {% if item.parent == page.menu.docs.identifier %}
+    <section class="section" id="{{ item.title | slugify }}">
+        <h2 class="title is-4 mb-1">{{ item.title | smartify }}</h2>
+        <ul style="column-count: 2; column-gap: 3em;">
+        {% for subitem in site.menus.docs %}
+            {% if subitem.parent == item.identifier %}
+            <li><a href="{{ subitem.url }}">{{ subitem.title | smartify }}</a>
             {% endif %}
-        
         {% endfor %}
-
+        </ul>
+    </section>
     {% endif %}
-
 {% endfor %}
-</ul>
-
-    
-    <!-- <section class="section" id="{{ section.name | slugify }}">
-        <h2 class="title is-4 mb-1">{{ section.name | smartify }}</h2>
-            
-    </section> -->
-
 </div>
