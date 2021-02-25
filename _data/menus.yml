@@ -1,5 +1,9 @@
 ---
 docs:
+- weight: 3
+  identifier: item_7qZ881Z
+  parent: item_pDTsV3Z
+  title: Créer ou rejoindre un espace de travail
 - weight: 1
   identifier: item_pDTsV3Z
   parent: item_RuqmnSy
