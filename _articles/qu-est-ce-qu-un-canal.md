@@ -4,7 +4,7 @@ featured: false
 menu:
   docs:
     weight: 1
-    parent: item_pT-ytk8
+    parent: item_e8ByfGQ
     title: Qu'est-ce qu'un canal ?
 
 ---
