@@ -3,8 +3,8 @@ title: L'expérience Slack pour ordinateur
 featured: false
 menu:
   docs:
-    weight: 1
-    parent: item_RuqmnSy
+    weight: 2
+    parent: item_pDTsV3Z
     identifier: item_yihL8Xw
 
 ---

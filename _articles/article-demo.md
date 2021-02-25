@@ -1,11 +1,6 @@
 ---
 title: Ceci est le titre de l'article
 featured: true
-menu:
-  docs:
-    weight: 1
-    parent: item_qJVrowm
-    identifier: item_fGfbg2m
 
 ---
 ## Texte et police
