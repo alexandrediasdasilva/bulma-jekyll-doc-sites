@@ -12,3 +12,5 @@ fields:
 - type: boolean
   name: featured
   label: En vedette
+  description: Affiche l'article dans la section "Articles à ne pas manquer" de la
+    page d'accueil
