@@ -1,6 +1,10 @@
 ---
 title: Ceci est le titre de l'article
 featured: true
+menu:
+  docs:
+    weight: 1
+    title: Test
 
 ---
 ## Texte et police
