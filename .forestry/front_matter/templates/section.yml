@@ -1,9 +1,0 @@
----
-label: Section
-hide_body: true
-fields:
-- type: text
-  name: title
-  label: Titre
-  config:
-    required: true
