@@ -1,7 +1,6 @@
 ---
 title: Test snippets
 featured: false
-published: false
 
 ---
 ![](/assets/using-slack.png)
