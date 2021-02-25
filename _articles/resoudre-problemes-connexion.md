@@ -1,7 +1,12 @@
 ---
 title: Résoudre les problèmes de connexion
 featured: true
-menu: docs
+menu:
+  docs:
+    identifier: item_seF4KNC
+    weight: 1
+    parent: item_x_SVpmd
+
 ---
 **Salut la compagnie !**
 
