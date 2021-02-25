@@ -7,6 +7,8 @@ fields:
   label: Titre
   config:
     required: true
+  description: 'Réfléchissez-y bien avant de sauvegarder pour la première fois : il
+    déterminera le <em>slug</em> de l''article.'
 - type: boolean
   name: featured
   label: En vedette
