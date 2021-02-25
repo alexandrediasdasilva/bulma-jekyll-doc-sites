@@ -5,7 +5,6 @@ menu:
   docs:
     weight: 3
     parent: item_pDTsV3Z
-    title: Test
 
 ---
 ## Texte et police
