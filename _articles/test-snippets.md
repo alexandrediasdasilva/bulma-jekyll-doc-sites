@@ -1,6 +1,10 @@
 ---
 title: Test snippets
 featured: false
+menu:
+  docs:
+    weight: 2
+    parent: item_x_SVpmd
 
 ---
 ![](/assets/using-slack.png)
