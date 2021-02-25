@@ -4,7 +4,9 @@ featured: false
 menu:
   docs:
     weight: 1
-    parent: item_qJVrowm
+    parent: item_RuqmnSy
+    identifier: item_yihL8Xw
+
 ---
 Slack est une plateforme de messagerie basée sur des canaux. Slack permet aux gens de collaborer plus efficacement, de connecter l’ensemble de leurs outils et services logiciels, et de trouver les informations dont ils ont besoin pour travailler au mieux, le tout dans un environnement sécurisé de niveau professionnel.
 
