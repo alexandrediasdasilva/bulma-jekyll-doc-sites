@@ -13,7 +13,7 @@
     {% for collection in collections_list %}
         {% if collection.slug == current_page_coll %}
             <h1 class="title is-2 has-text-weight-bold pt-5">{{ collection.title | smartify }}</h1>
-            <p class="subtitle">{{ collection.content | smartify }}</p>
+            <p class="subtitle">{{ collection.description | smartify }}</p>
         {% endif %}
     {% endfor %}
 

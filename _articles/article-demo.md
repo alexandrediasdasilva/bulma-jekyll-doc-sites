@@ -1,11 +1,7 @@
 ---
 title: Ceci est le titre de l'article
 featured: true
-menu:
-  docs:
-    weight: 1
-    identifier: item_83ntW3F
-
+menus: item_r6rR9w3
 ---
 ## Texte et police
 

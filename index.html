@@ -2,7 +2,6 @@
 layout: home
 title: Centre d'assistance Slack
 ---
-
 {% assign collections_list = site.collections | sort: 'order' %}
 
 <script> 
@@ -42,7 +41,7 @@ title: Centre d'assistance Slack
                 </div>
               </div>
               <h2 class="title is-4">{{ collection.title | smartify }}</h2>
-              <p>{{ collection.content | smartify }}</p>
+              <p>{{ collection.description | smartify }}</p>
             </div>
           </div>
         </a>
