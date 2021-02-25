@@ -12,5 +12,3 @@ fields:
 - type: boolean
   name: featured
   label: En vedette
-pages:
-- _articles/titre-brouillon-temporaire.md
