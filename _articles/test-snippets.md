@@ -4,6 +4,7 @@ featured: false
 published: false
 
 ---
+![](/assets/using-slack.png)
 
 {% include message.html type="bug" content="
 
@@ -22,3 +23,5 @@ Voici une note
 Voici une astuce
 
 " %}
+
+![](/assets/LOAD_FAIL.png)
