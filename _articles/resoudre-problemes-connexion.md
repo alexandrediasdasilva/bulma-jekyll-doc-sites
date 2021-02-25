@@ -1,6 +1,7 @@
 ---
 title: Résoudre les problèmes de connexion
 featured: true
+menu: docs
 ---
 **Salut la compagnie !**
 
