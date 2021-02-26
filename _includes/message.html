@@ -30,7 +30,7 @@ on affiche le contenu comme du texte normal.{%- endcomment -%}
             </div>
             <div class="media-content">
                 <p>
-                    <span class="has-text-weight-bold">{{ message_display_name }}&#160;:</span> {{ include.content | mardownify
+                    <span class="has-text-weight-bold">{{ message_display_name }}&#160;:</span> {{ include.content
                     }}
                 </p>
             </div>
@@ -38,5 +38,5 @@ on affiche le contenu comme du texte normal.{%- endcomment -%}
     </div>
 </div>
 {% else %}
-{{ include.content | markdownify }}
+{{ include.content }}
 {% endif %}
