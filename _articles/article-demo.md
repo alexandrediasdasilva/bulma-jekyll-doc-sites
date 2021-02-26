@@ -8,9 +8,12 @@ menu:
     identifier: item_oELbo26
 
 ---
+Si je t'avais rencontrée avant, quand j'étais jeune et charmant... charmant. – Benjamin Biolay
+
 ## Texte et police
 
 ### Texte normal
+
 <div class="message">
 <div class="message-body">
 ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
@@ -18,14 +21,13 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
 </div>
 
 ### Code
-```
-<div class="highlight">
-  <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">foo</span>
-  <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
-<span class="k">end</span></code></pre></div>
-```
 
----
+    <div class="highlight">
+      <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">foo</span>
+      <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span>
+    <span class="k">end</span></code></pre></div>
+
+***
 
 ## Titres
 
@@ -33,34 +35,42 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
 <div class="message-body">
 {{
 "# Titre 1
+
 ## Titre 2
+
 ### Titre 3
+
 #### Titre 4
+
 ##### Titre 5
+
 ###### Titre 6"
+
 | markdownify }}
 </div>
 </div>
 
----
+***
 
 ## Styles
 
-Le texte peut être mis en **gras**, *italique*, ou ~~barré~~.
+Le texte peut être mis en **gras**, _italique_, ou ~~barré~~.
 
 [Lien vers une autre page]({% link _articles/qu-est-ce-que-slack.md %})
 [Lien Mardown](_articles/qu-est-ce-que-slack.md)
 
----
+***
 
 ## Listes
 
 ### Liste à puces
-- **Item 1.** Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati officiis accusantium iusto aperiam! Minus assumenda molestias delectus qui vero repudiandae eius modi tempore maxime? Provident cumque aliquam earum nisi dignissimos.
-- **Item 2.** Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati officiis accusantium iusto aperiam! Minus assumenda molestias delectus qui vero repudiandae eius modi tempore maxime? Provident cumque aliquam earum nisi dignissimos.
-- **Item 3.** Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati officiis accusantium iusto aperiam! Minus assumenda molestias delectus qui vero repudiandae eius modi tempore maxime? Provident cumque aliquam earum nisi dignissimos.
+
+* **Item 1.** Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati officiis accusantium iusto aperiam! Minus assumenda molestias delectus qui vero repudiandae eius modi tempore maxime? Provident cumque aliquam earum nisi dignissimos.
+* **Item 2.** Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati officiis accusantium iusto aperiam! Minus assumenda molestias delectus qui vero repudiandae eius modi tempore maxime? Provident cumque aliquam earum nisi dignissimos.
+* **Item 3.** Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati officiis accusantium iusto aperiam! Minus assumenda molestias delectus qui vero repudiandae eius modi tempore maxime? Provident cumque aliquam earum nisi dignissimos.
 
 ### Liste numérotée
+
 1. **Item 1**. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati officiis accusantium iusto aperiam! Minus assumenda molestias delectus qui vero repudiandae eius modi tempore maxime? Provident cumque aliquam earum nisi dignissimos.
 2. **Item 2**. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati officiis accusantium iusto aperiam! Minus assumenda molestias delectus qui vero repudiandae eius modi tempore maxime? Provident cumque aliquam earum nisi dignissimos.
 3. **Item 3**. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati officiis accusantium iusto aperiam! Minus assumenda molestias delectus qui vero repudiandae eius modi tempore maxime? Provident cumque aliquam earum nisi dignissimos.
@@ -81,27 +91,28 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo at earum dolorem a
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo at earum dolorem aut magnam debitis iusto necessitatibus unde eligendi tempore nulla, similique aliquid labore nisi consectetur fugit quos autem exercitationem officia corporis reprehenderit et illo harum doloremque! Reprehenderit dolorem consectetur magni eos amet temporibus, a unde molestias quia, laborum atque.
 " %}
 
----
+***
 
 ## Tableaux
 
-| Colonne 1               | Colonne 2               | Colonne 3               |
-| ----------------------- | ----------------------- | ----------------------- |
+| Colonne 1 | Colonne 2 | Colonne 3 |
+| --- | --- | --- |
 | Ligne 1 de la colonne 1 | Ligne 1 de la colonne 2 | Ligne 1 de la colonne 3 |
 | Ligne 2 de la colonne 1 | Ligne 2 de la colonne 2 | Ligne 1 de la colonne 3 |
 | Ligne 3 de la colonne 1 | Ligne 3 de la colonne 2 | Ligne 3 de la colonne 3 |
 
----
+***
 
 ## Procédure
 
 {% include instructions.html
 
 1="Lorem ipsum dolor **sit amet consectetur**, adipisicing elit :
-- Impedit obcaecati voluptatem recusandae
-- Quaerat sapiente magni ipsa assumenda
-- Aliquid facilis sequi.
-"
+
+* Impedit obcaecati voluptatem recusandae
+* Quaerat sapiente magni ipsa assumenda
+* Aliquid facilis sequi.
+  "
 
 2="Lorem ipsum dolor [sit amet consectetur](_articles/comprendre-comment-fonctionnent-les-actions-dans-slack.md), adipisicing elit. Impedit obcaecati voluptatem recusandae quaerat sapiente magni ipsa assumenda aliquid facilis sequi!"
 
