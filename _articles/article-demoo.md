@@ -8,7 +8,6 @@ menu:
     identifier: item_oELbo26
 
 ---
-
 {% include message.html type="tip" content="
 
 Si je t'avais rencontrée avant, quand j'étais jeune et charmant... charmant.
