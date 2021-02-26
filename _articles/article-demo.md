@@ -8,7 +8,7 @@ menu:
     identifier: item_oELbo26
 
 ---
-Si je t'avais rencontrée avant, quand j'étais jeune et charmant... charmant. – Benjamin Biolay
+Si je t'avais rencontrée avant, quand j'étais jeune et charmant... charmant. **_– Benjamin Biolay_**
 
 ## Texte et police
 
