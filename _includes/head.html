@@ -12,3 +12,21 @@
     </head>
     <body>
     {% include navbar.html %}
+
+{%- comment -%} DEBUG
+<div class="section content container">
+    <ul>
+        <li>page.menu.docs.identifier : {{ page.menu.docs.identifier }}</li>
+        <br>
+        <!-- <li>current_grandparent : {{ current_grandparent }}</li>
+        <li>current_parent : {{ current_parent }}</li> -->
+        <li>current_parent : {{ current_parent }}</li>
+        <li>current_parent_url : {{ current_parent_url }}</li>
+        <li>current_parent_id : {{ current_parent_id }}</li>
+        <br>
+        <li>current_parentless : {{ current_parentless }}</li>
+        <li>current_parentless_id : {{ current_parentless_id }}</li>
+        <li>current_parentless_url : {{ current_parentless_url }}</li>
+    </ul>
+</div>
+{%- endcomment -%}

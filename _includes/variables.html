@@ -1,0 +1,33 @@
+{%- comment -%}On définit des variables qui vont servir pour garantir le bon fonctionnement du hero et du breadcrumb{%- endcomment -%}
+{% for item in site.menus.docs %}
+    {% if page.menu.docs.identifier == item.identifier %}
+        {% if item.parent %}
+            {% for subitem in site.menus.docs %}
+               {% if subitem.identifier == item.parent %}
+                    {% assign current_parent = subitem.title %}
+                    {% assign current_parent_id = subitem.identifier %}
+                    {% for subsubitem in site.menus.docs %}
+                        {% if subsubitem.identifier == subitem.parent %}
+                            {% assign current_parentless = subsubitem.title %}
+                            {% assign current_parentless_id = subsubitem.identifier %}
+                            {% assign current_parentless_url = subsubitem.url %}
+                        {% endif %}
+                    {% endfor %}
+               {% endif %}
+            {% endfor %}
+        {% else %}
+            {% assign current_parent = item.title %}
+            {% assign current_parent_url = item.url %}
+            {% assign current_parent_id = item.identifier %}
+            {% assign current_parentless = item.title %}
+            {% assign current_parentless_id = item.identifier %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+{%- comment -%}On récupère la description de la collection{%- endcomment -%}
+{% for item in site.collections %}
+    {% if current_parentless_id == item.menu.docs.identifier %}
+        {% assign current_parentless_desc = item.description %}
+    {% endif %}
+{% endfor %}

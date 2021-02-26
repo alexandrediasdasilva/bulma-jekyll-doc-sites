@@ -170,3 +170,30 @@
     {% endif %}
 {% endfor %}
 
+
+
+{%- comment -%}
+{% for item in site.menus.docs %}
+{% if page.menu.docs.identifier == item.identifier %}
+    {% for parent in site.menus.docs %}
+        {% if parent.identifier == item.parent %}
+            {% assign current_parent = parent.title %}
+            {% assign current_parent_url = parent.url %}
+            {% assign current_parent_id = parent.identifier %}
+            {% for grandparent in site.menus.docs %}
+                {% if grandparent.identifier == parent.parent %}
+                    {% assign current_grandparent = grandparent.title %}
+                    {% assign current_grandparent_url = grandparent.url %}
+                    {% assign current_grandparent_id = grandparent.identifier %}
+                    {% for item in site.collections %}
+                        {% if grandparent.identifier == item.menu.docs.identifier %}
+                            {% assign current_grandparent_desc = item.description %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+{% endfor %}
+{%- endcomment -%}

@@ -1,12 +1,14 @@
 ---
 layout: default
 ---
+{% include variables.html %}
+
 <article class="section">
     <nav class="breadcrumb has-succeeds-separator container is-max-desktop pb-2">
         <ul>
             <li><a href="/">Centre d'assistance Slack</a></li>
-            <li><a href="/collections/{{ collection_slug }}/">{{ collection_title }}</a></li>
-            <li><a href="/collections/{{ collection_slug }}#{{ page.section | slugify }}">{{ page.section | smartify }}</a></li>
+            <li><a href="{{ current_parentless_url }}">{{ current_parentless | smartify }}</a></li>
+            <li><a href="{{ current_parentless_url }}#{{ current_parent | slugify }}">{{ current_parent | smartify }}</a></li>
         </ul>
     </nav>
     <div class="container is-max-desktop content">
@@ -24,8 +26,3 @@ layout: default
         </div>
     </div>
 </article>
-
-
-
-
-

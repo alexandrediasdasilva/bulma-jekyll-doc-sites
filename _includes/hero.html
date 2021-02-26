@@ -1,37 +1,19 @@
 <section class="hero is-primary">
     <div class="hero-body">
         <div class="container is-max-desktop">
-
 {%- comment -%}Début de la logique pour l'affichage du titre et sous-titre{%- endcomment -%}
 
-{%- comment -%}Si on est sur une page d'article, on remonte au fichier correspondant à la collection à laquelle l'article appartient pour accéder à son "title" et à son contenu.{%- endcomment -%}
-{% if page.collection == "articles" %}
+{% if page.layout == 'search' %}
+            <h1 class="title is-4 has-text-weight-bold pt-5" id="search-count"></h1>
+    {% include large-search-box.html %}
 
-    {%- comment -%}On itère sur les collections en comparant le "coll" de l'article avec le slug de chaque collection. S'il y a correspondance, alors on retourne le "title" de la collection correspondante.{%- endcomment -%}
-    {% for collection in collections_list %}
-        {% if collection.slug == current_page_coll %}
-            <h1 class="title is-2 has-text-weight-bold pt-5">{{ collection.title | smartify }}</h1>
-            <p class="subtitle">{{ collection.description | smartify }}</p>
-        {% endif %}
-    {% endfor %}
-
-{%- comment -%}Si on est sur la page de recherche, alors on affiche seulement la barre de recherche, sans titre ni sous-titre.{%- endcomment -%}
-
-{% elsif page.layout == 'search' %}
-<h1 class="title is-4 has-text-weight-bold pt-5" id="search-count"></h1>
-{% include large-search-box.html %}
-
-{%- comment -%}{%- endcomment -%}
-{% elsif page.layout == 404 %}
+    {% elsif page.layout == 404 %}
             <h1 class="title is-2 has-text-weight-bold pt-5">Vous êtes tombé(e) sur un os !</h1>
             <p class="subtitle">404 - Page introuvable</p>
 
-{%- comment -%}Si on n'est pas sur une page d'article, ni sur la page de recherche, ni sur la 404, ni sur sur la page d'accueil (donc forcément sur une page de
-collection), on a directement accès au titre et sous-titre via les variables "title" et "content" de l'article{%- endcomment -%}
-{% elsif page.url != "/" %}
-
-            <h1 class="title is-2 has-text-weight-bold pt-5">{{ page.title | smartify }}</h1>
-            <p class="subtitle">{{ page.description | smartify }}</p>
+    {% elsif page.url != "/" %}
+            <h1 class="title is-2 has-text-weight-bold pt-5">{{ current_parentless | smartify }}</h1>
+            <p class="subtitle">{{ current_parentless_desc | smartify }}</p>
 
 {% endif %}
 
@@ -43,14 +25,13 @@ collection), on a directement accès au titre et sous-titre via les variables "t
 
 {%- comment -%}Début de la logique pour l'affichage des onglets de collection{%- endcomment -%}
 
-
     <div class="hero-foot pt-5">
         <div class="container is-max-desktop">
             <nav class="tabs is-boxed is-fullwidth has-text-weight-semibold">
                 <ul>
                 {% for item in site.menus.docs %}
                     {% unless item.parent %}
-                    <li class="{% if item.identifier == page.menu.docs.identifier %}is-active{% endif %}">
+                    <li class="{% if item.identifier == current_parentless_id %}is-active{% endif %}">
                         <a href="{{ item.url }}">{{ item.title | smartify }}</a>
                     </li>
                     {% endunless %}
