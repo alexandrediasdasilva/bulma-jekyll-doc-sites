@@ -8,14 +8,7 @@ menu:
     identifier: item_oELbo26
 
 ---
-
 ## Texte et police
-
-{% include message.html type="bug" content="
-
-Si je t'avais rencontrée avant, quand j'étais jeune et charmant... charmant. _Benjamin Biolay_
-
-" %}
 
 ### Texte normal
 
