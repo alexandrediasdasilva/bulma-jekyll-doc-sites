@@ -1,6 +1,7 @@
 ---
 title: Ceci est le titre de l'article
 featured: true
+common_troubleshooting_topic: true
 menu:
   docs:
     weight: 2
