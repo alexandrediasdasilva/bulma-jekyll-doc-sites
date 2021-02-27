@@ -1,3 +1,10 @@
+{%- comment -%}Résolution du titre de la page d'accueil{%- endcomment -%}
+{% for page in site.pages %}
+    {% if page.url == "/" %}
+        {% assign home_title = page.title %}   
+    {% endif %}
+{% endfor %}
+
 {%- comment -%}On définit des variables qui vont servir pour garantir le bon fonctionnement du hero et du breadcrumb{%- endcomment -%}
 {% for item in site.menus.docs %}
     {% if page.menu.docs.identifier == item.identifier %}
