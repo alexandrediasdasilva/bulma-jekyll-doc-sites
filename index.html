@@ -19,11 +19,9 @@ title: Centre d'assistance Slack
       {% include large-search-box.html %}
       <p>
         <span class="has-text-weight-semibold">Problèmes récurrents&nbsp;: </span>
-{% for article in site.articles %}
-  {% if article.common_troubleshooting_topic %}
-        <a href="{{ article.url }}">{{ article.title }}</a>
-    {% unless forloop.last %}, {% endunless %}
-  {% endif %}
+{% assign common_troubleshooting_articles = site.articles | where: "common_troubleshooting_topic", true %}
+{% for article in common_troubleshooting_articles %}
+        <a href="{{ article.url }}">{{ article.title | downcase }}</a>{% unless forloop.last %}, {% endunless %}
 {% endfor %}
       </p>
     </div>
