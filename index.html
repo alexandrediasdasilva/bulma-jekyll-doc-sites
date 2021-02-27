@@ -18,8 +18,13 @@ title: Centre d'assistance Slack
       </h2>
       {% include large-search-box.html %}
       <p>
-        <span class="has-text-weight-semibold">Problèmes récurrents : </span>
-        <a href="">notifications</a>, <a href="">se connecter à Slack</a>, <a href="">Slack Calls</a>
+        <span class="has-text-weight-semibold">Problèmes récurrents&nbsp;: </span>
+{% for article in site.articles %}
+  {% if article.common_troubleshooting_topic %}
+        <a href="{{ article.url }}">{{ article.title }}</a>
+    {% unless forloop.last %}, {% endunless %}
+  {% endif %}
+{% endfor %}
       </p>
     </div>
   </div>
