@@ -32,7 +32,7 @@ sections:
   label: Data
 - type: document
   path: _data/tips.yml
-  label: Test
+  label: Astuces
 upload_dir: assets
 public_path: "/assets"
 front_matter_path: ''
