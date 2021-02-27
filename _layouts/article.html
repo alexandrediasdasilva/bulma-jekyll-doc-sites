@@ -6,7 +6,7 @@ layout: default
 <article class="section">
     <nav class="breadcrumb has-succeeds-separator container is-max-desktop pb-2">
         <ul>
-            <li><a href="/">{{ home_title | smartify }}</a></li>
+            <li><a href="/">{{ home_title | smartify }}</a></li>
             <li><a href="{{ current_parentless_url }}">{{ current_parentless | smartify }}</a></li>
             <li><a href="{{ current_parentless_url }}#{{ current_parent | slugify }}">{{ current_parent | smartify }}</a></li>
         </ul>
