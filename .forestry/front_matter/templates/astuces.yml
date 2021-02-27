@@ -1,0 +1,14 @@
+---
+label: Astuces
+hide_body: true
+fields:
+- type: field_group_list
+  name: astuces
+  label: astuces
+  fields:
+  - type: textarea
+    name: text
+    label: text
+  - type: text
+    name: icon
+    label: icon
