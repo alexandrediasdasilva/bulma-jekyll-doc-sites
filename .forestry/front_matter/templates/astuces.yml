@@ -4,11 +4,13 @@ hide_body: true
 fields:
 - type: field_group_list
   name: astuces
-  label: astuces
+  label: Astuces
   fields:
   - type: textarea
     name: text
-    label: text
+    label: Texte
   - type: text
     name: icon
-    label: icon
+    label: Icône
+    description: Le nom de l'icône tel qu'il apparaît dans la galerie <a href="https://fontawesome.com/icons?d=gallery&amp;p=2&amp;m=free"
+      title="" target="_blank">Font Awesome</a>
