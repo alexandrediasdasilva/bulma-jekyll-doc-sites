@@ -16,14 +16,3 @@ fields:
   label: En vedette
   description: Affiche l'article dans la section “Articles à ne pas manquer” de la
     page d’accueil
-- name: test
-  type: field_group
-  config: {}
-  fields:
-  - name: test
-    type: boolean
-    label: test
-  - name: test_2
-    type: boolean
-    label: test 2
-  label: test
