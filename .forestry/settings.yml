@@ -31,9 +31,8 @@ sections:
 - type: heading
   label: Data
 - type: document
-  path: _data/testimonials.yml
+  path: _data/tips.yml
   label: Test
-  match: "**/*"
 upload_dir: assets
 public_path: "/assets"
 front_matter_path: ''
