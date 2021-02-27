@@ -33,7 +33,6 @@ sections:
 - type: document
   path: _data/tips.yml
   label: Astuces
-  match: "**/*"
 upload_dir: assets
 public_path: "/assets"
 front_matter_path: ''
