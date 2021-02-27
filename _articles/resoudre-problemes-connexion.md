@@ -1,6 +1,7 @@
 ---
 title: Résoudre les problèmes de connexion
-featured: true
+featured: false
+common_troubleshooting_topic: true
 menu:
   docs:
     identifier: item_seF4KNC
