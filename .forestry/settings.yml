@@ -28,6 +28,11 @@ sections:
 - type: jekyll-pages
   label: Pages
   create: all
+- type: heading
+  label: Data
+- type: document
+  path: _data/tips.yml
+  label: Test
 upload_dir: assets
 public_path: "/assets"
 front_matter_path: ''
