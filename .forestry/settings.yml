@@ -47,4 +47,4 @@ build:
   mount_path: "/srv"
   working_dir: "/srv"
   instant_preview_command: bundle exec jekyll serve --drafts --unpublished --future
-    --livereload -d _site
+    -d _site
