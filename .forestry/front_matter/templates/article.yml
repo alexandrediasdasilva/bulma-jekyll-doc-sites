@@ -7,10 +7,8 @@ fields:
   label: Titre
   config:
     required: true
-  description: 'Réfléchissez-y bien avant de sauvegarder pour la première fois : il
-    déterminera le <em>slug</em> définitif de l''article.'
 - type: boolean
   name: featured
   label: En vedette
-  description: Affiche l'article dans la section "Articles à ne pas manquer" de la
-    page d'accueil
+  description: Affiche l'article dans la section “Articles à ne pas manquer” de la
+    page d’accueil

@@ -12,8 +12,8 @@ fields:
   label: Description
   config:
     required: true
-  description: Apparaît sur la page d'accueil et la page de collection correspondante
+  description: Apparaît sur la page d’accueil et la page de collection correspondante
 - type: file
   name: image
   label: Image
-  description: Apparaît sur la page d'accueil
+  description: Apparaît sur la page d’accueil

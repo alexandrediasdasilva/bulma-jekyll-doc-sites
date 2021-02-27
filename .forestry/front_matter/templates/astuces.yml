@@ -12,7 +12,7 @@ fields:
   - type: text
     name: icon
     label: Icône
-    description: Le nom de l'icône tel qu'il apparaît dans la galerie <a href="https://fontawesome.com/icons?d=gallery&amp;p=2&amp;m=free"
+    description: Le nom de l’icône tel qu’il apparaît dans la galerie <a href="https://fontawesome.com/icons?d=gallery&amp;p=2&amp;m=free"
       title="" target="_blank">Font Awesome</a>
 pages:
 - _data/tips.yml
