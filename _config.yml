@@ -33,6 +33,7 @@ plugins:
   - jekyll-relative-links
   - jekyll-menus
   - jekyll-seo-tag
+  - jekyll-toc
 
 relative_links:
   enabled: true
