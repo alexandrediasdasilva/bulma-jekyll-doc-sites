@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: "/admin/"
 webhook_url: 
 sections:
+- type: document
+  path: _data/tips.yml
+  label: Astuces
+  match: "**/*"
 - type: heading
   label: Documentation
 - type: directory
@@ -30,9 +34,6 @@ sections:
   create: all
 - type: heading
   label: Data
-- type: document
-  path: _data/tips.yml
-  label: Astuces
 upload_dir: assets
 public_path: "/assets"
 front_matter_path: ''
