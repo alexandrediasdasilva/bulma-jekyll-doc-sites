@@ -29,9 +29,8 @@ on affiche le contenu comme du texte normal.{%- endcomment -%}
                 </span>
             </div>
             <div class="media-content">
-                <p>
-                    <span class="has-text-weight-bold">{{ message_display_name }}&#160;:</span> {{ include.content | markdownify }}
-                </p>
+                <style>.message p:before {content: "{{ message_display_name }}\00a0: "; font-weight: bold;}</style>
+                {{ include.content | markdownify }}
             </div>
         </div>
     </div>
