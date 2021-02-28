@@ -13,7 +13,7 @@
     color: #1d1c1d !important;
 }
 
-.section.section {
+section.section {
     scroll-margin-top: 2em;
 }
 
@@ -21,7 +21,7 @@
     border-bottom: 1px solid #e3e3e3;
 }
 
-.tips, footer.footer {
+.tips, .toc, footer.footer {
     font-size: 0.9em;
 }
 
@@ -71,4 +71,14 @@ footer.footer ul {
     list-style: none;
     margin-left: 0;
     margin-top: 0;
+}
+
+.toc.card {
+    position: sticky;
+    top: 10rem;
+}
+
+.toc ul {
+    list-style: none;
+    margin-left: 0;    
 }

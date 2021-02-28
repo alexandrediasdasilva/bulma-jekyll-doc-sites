@@ -1,6 +1,5 @@
 ---
 layout: default
-toc: true
 ---
 {% include variables.html %}
 
@@ -14,16 +13,35 @@ toc: true
     </nav>
     <div class="container is-max-desktop content">
         <div class="columns">
-            <div class="column is-two-thirds">
+            <div class="column is-8">
                 <h1 class="title">{{ page.title | smartify }}</h1>
                 {{ content }}
             </div>
-            <div class="column">
-                <div class="box is-uppercase has-text-weight-semibold">Dans cet article
-                    <hr>
-                    
+            <div class="column is-offset-1">
+                <div class="toc card">
+                    <header class="card-header">
+                    <p class="card-header-title is-uppercase">
+                        Dans cet article
+                    </p>     
+                    </header>
+                    <div class="card-content">
+                    <div class="content">
+                        {% include toc.html html=content h_min=2 h_max=2 %}
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </article>
+
+
+
+<!-- 
+<div class="column is-offset-1">
+    <div class="toc box">
+        <p class="is-uppercase has-text-weight-semibold">Dans cet article</p>
+        <hr>
+        {% include toc.html html=content h_min=2 h_max=2 %}
+    </div>
+</div> -->
