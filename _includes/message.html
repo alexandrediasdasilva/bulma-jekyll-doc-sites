@@ -36,5 +36,5 @@ on affiche le contenu comme du texte normal.{%- endcomment -%}
     </div>
 </div>
 {% else %}
-{{ include.content }}
+{{ include.content | markdownify }}
 {% endif %}
