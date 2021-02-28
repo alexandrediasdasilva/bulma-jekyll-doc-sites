@@ -18,7 +18,7 @@ title: Centre d'assistance Slack
       </h2>
       {% include large-search-box.html %}
       <p>
-        <span class="has-text-weight-semibold">Problèmes récurrents&nbsp;: </span>
+        <span class="has-text-weight-semibold">Problèmes récurrents&#160;: </span>
 {% assign common_troubleshooting_articles = site.articles | where: "common_troubleshooting_topic", true %}
 {% for article in common_troubleshooting_articles %}
         <a href="{{ article.url }}">{{ article.title | downcase }}</a>{% unless forloop.last %}, {% endunless %}
