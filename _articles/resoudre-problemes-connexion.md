@@ -9,8 +9,6 @@ menu:
     parent: item_x_SVpmd
 
 ---
-**Salut la compagnie !**
-
 Si vous ne parvenez pas à vous connecter à Slack, obtenez plus d’informations sur les problèmes de connexion et sur leur résolution.
 
 {% include message.html type="tip" content="
