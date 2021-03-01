@@ -15,8 +15,6 @@ Si vous ne parvenez pas à vous connecter à Slack, obtenez plus d’information
 Si vous êtes administrateur informatique ou administrateur réseau, apprenez à gérer les problèmes de connexion sur votre réseau."
 %}
 
-[Texte du lien]({% link _articles/nomdufichier.md %})
-
 ## Problèmes fréquents
 
 | Problème | Message d’erreur |
