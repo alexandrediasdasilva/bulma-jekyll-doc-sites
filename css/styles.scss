@@ -27,7 +27,7 @@ $smaller-max-width: 650px !important;
     background-size: cover;
     background-position: center bottom;
     .tabs li.is-active a {
-        color: #1d1c1d !important;
+        color: $text-strong !important;
     }
 }
 
