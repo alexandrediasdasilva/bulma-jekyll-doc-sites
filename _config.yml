@@ -3,6 +3,9 @@ locale: fr_FR
 
 permalink: pretty
 
+sass:
+    style: compressed
+
 kramdown:
   input: GFM
   auto_ids: true

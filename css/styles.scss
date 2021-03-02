@@ -1,7 +1,14 @@
 ---
 ---
+
+@charset "utf-8";
+
+$primary: #007a5a;
+
 $smaller-font-size: 0.9em;
 $smaller-max-width: 650px !important;
+
+@import "../_sass/bulma-0.9.1/bulma.sass";
 
 @mixin column-list {
     column-count: 2;
@@ -37,8 +44,13 @@ $smaller-max-width: 650px !important;
 }
 
 .home {
-    .hero-body .container {
-        max-width: $smaller-max-width;
+    .hero-body {
+        a {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: $smaller-max-width;
+        }
     }
     .card, .box {
         height: 100%;
