@@ -4,7 +4,6 @@
 @charset "utf-8";
 
 $primary: #007a5a;
-
 $smaller-font-size: 0.9em;
 $smaller-max-width: 650px !important;
 
@@ -35,7 +34,7 @@ $smaller-max-width: 650px !important;
     .section {
         scroll-margin-top: 2em;
         &:not(:last-child) {
-            border-bottom: 1px solid #e3e3e3;
+            border-bottom: 1px solid $grey-lighter;
         }
         ul {
             @include column-list;
@@ -57,11 +56,11 @@ $smaller-max-width: 650px !important;
     }
     .box {
         box-shadow: none;
-        border: 1px solid #e3e3e3;
+        border: 1px solid $grey-lighter;
     }
     .cards {
-        background-color: #f4f7fa;
-        border-bottom: 1px solid #e3e3e3;
+        background-color: $white-ter;
+        border-bottom: 1px solid $grey-lighter;
     }
     .section ul {
         @include column-list;
@@ -90,6 +89,12 @@ $smaller-max-width: 650px !important;
 // }
 
 .article {
+    @media(max-width: 768px) {
+        .columns {
+          flex-direction: column-reverse;
+          display: flex;
+        }
+    }
     .toc {
         font-size: $smaller-font-size;
         .card {
@@ -104,6 +109,7 @@ $smaller-max-width: 650px !important;
 }
 
 .footer {
+    background-color: $white;
     font-size: $smaller-font-size;
     ul {
         list-style-type: none !important;
