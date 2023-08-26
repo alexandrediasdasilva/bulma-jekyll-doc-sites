@@ -1,11 +1,14 @@
----
 astuces:
-- text: 'Utilisez le "commutateur" : il vous permet de basculer rapidement d''un canal
-    à un autre à l’aide du raccourci ⌘/Ctrl+K.'
-  icon: random
-- text: 'Vous souhaitez effectuer une recherche dans un canal en particulier ? Tapez
-    simplement : ⌘/Ctrl+F'
-  icon: search
-- text: Vous avez envoyé quelque chose par erreur ? Appuyez sur la touche avec la
-    flèche vers le haut pour modifier votre dernier message.
-  icon: arrow-up
+  - text: >-
+      Utilisez le "commutateur" : il vous permet de basculer rapidement d'un
+      canal à un autre à l’aide du raccourci ⌘/Ctrl+K.
+    icon: random
+  - text: >-
+      Vous souhaitez effectuer une recherche dans un canal en particulier ?
+      Tapez simplement : ⌘/Ctrl+F
+    icon: search
+  - text: >-
+      Vous avez envoyé quelque chose par erreur ? Appuyez sur la touche avec la
+      flèche vers le haut pour modifier votre dernier message.
+    icon: arrow-up
+_template: astuces
